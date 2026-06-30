@@ -3,6 +3,7 @@ import { PageShell, PageHeader } from "@/components/page-shell";
 import { GraduationCap, User, Plane } from "lucide-react";
 import leonorPhoto from "@/assets/LeonorAbreu.jpg.asset.json";
 import martaPhoto from "@/assets/MartaXavier.jpg.asset.json";
+import afonsoPhoto from "@/assets/AfonsoFernandes.jpeg.asset.json";
 
 export const Route = createFileRoute("/team")({
   head: () => ({
@@ -25,7 +26,12 @@ const current: Member[] = [
     photo: martaPhoto.url,
     bio: "From Lisbon, with a background in Biological and Biomedical Engineering (IST-ULisboa). Marta is a final-year PhD student working on neuroimaging and computational neuroscience, between Lisbon and Barcelona. Outside the lab, she is usually writing, playing music, or exploring something creative.",
   },
-  { name: "PhD Student 2", role: "PhD Student", bio: "Brief research focus — replace with bio.", icon: GraduationCap },
+  {
+    name: "Afonso Fernandes",
+    role: "PhD Student",
+    photo: afonsoPhoto.url,
+    bio: "Psychiatry resident from Braga, Portugal. Afonso studied Medicine at the University of Minho, where he is now pursuing a PhD. With an unusual appetite for complicated things — from the mind and neuroscience to abstract expressionism and Beckett's plays — he aims to understand the human mind a little better, one scan at a time.",
+  },
   { name: "PhD Student 3", role: "PhD Student", bio: "Brief research focus — replace with bio.", icon: GraduationCap },
   { name: "PhD Student 4", role: "PhD Student", bio: "Brief research focus — replace with bio.", icon: GraduationCap },
   { name: "PhD Student 5", role: "PhD Student", bio: "Brief research focus — replace with bio.", icon: GraduationCap },
