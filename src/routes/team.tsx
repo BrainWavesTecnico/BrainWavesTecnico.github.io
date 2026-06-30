@@ -15,7 +15,7 @@ export const Route = createFileRoute("/team")({
   component: TeamPage,
 });
 
-type Member = { name: string; role: string; bio: string; icon: typeof User };
+type Member = { name: string; role: string; bio: string; icon?: typeof User; photo?: string };
 
 const current: Member[] = [
   { name: "PhD Student 1", role: "PhD Student", bio: "Brief research focus — replace with bio.", icon: GraduationCap },
@@ -24,7 +24,12 @@ const current: Member[] = [
   { name: "PhD Student 4", role: "PhD Student", bio: "Brief research focus — replace with bio.", icon: GraduationCap },
   { name: "PhD Student 5", role: "PhD Student", bio: "Brief research focus — replace with bio.", icon: GraduationCap },
   { name: "Master Student", role: "MSc Student", bio: "Thesis topic — replace with bio.", icon: User },
-  { name: "Research Assistant", role: "Research Assistant", bio: "Project focus — replace with bio.", icon: User },
+  {
+    name: "Leonor Abreu",
+    role: "Research Assistant",
+    photo: leonorPhoto.url,
+    bio: "Born in Porto, Leonor has 18+ years of experience in content editing, personal and team development, social impact and investigation. She holds a Master's in Psychology from ISPA (2008) and an MSc in Psychology and Neuroscience of Mental Health from King's College London (2025), where she received the Dean's Award for Outstanding Student Performance in Neuroimaging and Mental Health. Passionate about brain connectivity, she is committed to translating insights on brain health into practical strategies for prevention, treatment and social inclusion, and to fostering communication between researchers, society and policymakers. Outside the lab, she volunteers with ENCONTRAR+SE and loves running, dancing and time with her three boys.",
+  },
 ];
 
 const visiting: Member[] = [
@@ -37,11 +42,15 @@ const former: Member[] = [
 ];
 
 function MemberCard({ m }: { m: Member }) {
-  const Icon = m.icon;
+  const Icon = m.icon ?? User;
   return (
     <div className="glass-card p-5 flex gap-4">
-      <div className="shrink-0 h-12 w-12 rounded-full bg-secondary flex items-center justify-center text-primary">
-        <Icon className="h-6 w-6" />
+      <div className="shrink-0 h-12 w-12 rounded-full bg-secondary flex items-center justify-center text-primary overflow-hidden">
+        {m.photo ? (
+          <img src={m.photo} alt={`Photo of ${m.name}`} className="h-full w-full object-cover" />
+        ) : (
+          <Icon className="h-6 w-6" />
+        )}
       </div>
       <div>
         <div className="font-semibold">{m.name}</div>
