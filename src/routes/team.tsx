@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHeader } from "@/components/page-shell";
 import { GraduationCap, User, Plane } from "lucide-react";
+import leonorPhoto from "@/assets/LeonorAbreu.jpg.asset.json";
 
 export const Route = createFileRoute("/team")({
   head: () => ({
