@@ -32,9 +32,16 @@ function Index() {
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">one wave at a time.</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg text-muted-foreground">
-              BrainWaves is a research group at the Evolutionary Systems and Biomedical Engineering Lab (LaSEEB),
-              part of ISR-Lisboa at Instituto Superior Técnico. We develop methods and tools to study brain dynamics
-              for clinical and scientific impact.
+              The BrainWaves Lab is led by Joana Cabral, Assistant Professor at the Department of Bioengineering of
+              Instituto Superior Técnico (IST), University of Lisbon. The lab is part of the Evolutionary Systems and
+              Biomedical Engineering Lab (LaSEEB), a research group of ISR Lisboa at IST, the engineering school of the
+              University of Lisbon.
+            </p>
+            <p className="mt-4 max-w-xl text-lg text-muted-foreground">
+              BrainWaves Lab investigates the large-scale dynamics of brain activity, focusing on how oscillatory
+              patterns and wave-like phenomena shape brain function over time. The lab combines computational modelling,
+              neuroimaging analysis, and signal processing methods to explore brain network dynamics, cerebrospinal
+              fluid flow, and their relevance to cognition and neurological health.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/team" className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground hover:opacity-90 transition">
