@@ -16,7 +16,19 @@ export default defineConfig({
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
-    ...(isGithubPagesBuild ? { prerender: { enabled: true, crawlLinks: true } } : {}),
+    ...(isGithubPagesBuild
+      ? {
+          prerender: {
+            enabled: true,
+            crawlLinks: true,
+            // crawlLinks follows every <a href>, including links to built binary assets
+            // (e.g. the CV PDF download link). Prerendering re-fetches those as text and
+            // overwrites the already-correct binary file with a UTF-8-mangled copy, so
+            // skip crawling anything that looks like a file (has an extension) rather than a route.
+            filter: (page: { path: string }) => !/\.[a-z0-9]+$/i.test(page.path.split(/[?#]/)[0]),
+          },
+        }
+      : {}),
   },
   ...(isGithubPagesBuild
     ? { nitro: false, vite: { base: githubPagesBase, preview: { host: "127.0.0.1" } } }
