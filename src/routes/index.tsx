@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/page-shell";
-import logo from "@/assets/brainwaves-logo.png.asset.json";
-import teamPhoto from "@/assets/team-photo.jpeg.asset.json";
+import logo from "@/assets/brainwaves-logo.png";
+import teamPhoto from "@/assets/team-photo.jpeg";
 import { ArrowRight, Brain, Activity, Microscope } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -54,7 +54,7 @@ function Index() {
           </div>
           <div className="relative flex justify-center">
             <div className="absolute inset-0 bg-gradient-radial from-primary/20 to-transparent blur-3xl" />
-            <img src={logo.url} alt="BrainWaves logo" className="relative h-80 w-80 md:h-96 md:w-96 brain-glow" />
+            <img src={logo} alt="BrainWaves logo" className="relative h-80 w-80 md:h-96 md:w-96 brain-glow" />
           </div>
         </div>
       </section>
@@ -77,7 +77,7 @@ function Index() {
       {/* Team photo */}
       <section className="container-page py-16">
         <div className="glass-card overflow-hidden">
-          <img src={teamPhoto.url} alt="BrainWaves team at Instituto Superior Técnico" className="w-full h-auto" />
+          <img src={teamPhoto} alt="BrainWaves team at Instituto Superior Técnico" className="w-full h-auto" />
           <div className="p-6 md:p-8 flex flex-wrap items-end justify-between gap-4">
             <div>
               <div className="text-xs uppercase tracking-[0.2em] text-primary">Our team</div>

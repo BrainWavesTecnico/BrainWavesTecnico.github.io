@@ -6,10 +6,19 @@
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
+// Static export for GitHub Pages (`bun run build:pages`): prerenders every route to
+// static HTML and skips the nitro/Cloudflare server bundle, which GitHub Pages can't run.
+const isGithubPagesBuild = process.env.GITHUB_PAGES_BUILD === "true";
+const githubPagesBase = process.env.GITHUB_PAGES_BASE ?? "/BrainWavesTecnico/";
+
 export default defineConfig({
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
+    ...(isGithubPagesBuild ? { prerender: { enabled: true, crawlLinks: true } } : {}),
   },
+  ...(isGithubPagesBuild
+    ? { nitro: false, vite: { base: githubPagesBase, preview: { host: "127.0.0.1" } } }
+    : {}),
 });

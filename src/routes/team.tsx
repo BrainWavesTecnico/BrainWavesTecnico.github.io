@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHeader } from "@/components/page-shell";
 import { GraduationCap, User, Plane } from "lucide-react";
-import leonorPhoto from "@/assets/LeonorAbreu.jpg.asset.json";
-import martaPhoto from "@/assets/MartaXavier.jpg.asset.json";
-import afonsoPhoto from "@/assets/AfonsoFernandes.jpeg.asset.json";
+import leonorPhoto from "@/assets/LeonorAbreu.jpg";
+import martaPhoto from "@/assets/MartaXavier.jpg";
+import afonsoPhoto from "@/assets/AfonsoFernandes.jpeg";
 
 export const Route = createFileRoute("/team")({
   head: () => ({
@@ -23,13 +23,13 @@ const current: Member[] = [
   {
     name: "Marta Xavier",
     role: "PhD Student",
-    photo: martaPhoto.url,
+    photo: martaPhoto,
     bio: "From Lisbon, with a background in Biological and Biomedical Engineering (IST-ULisboa). Marta is a final-year PhD student working on neuroimaging and computational neuroscience, between Lisbon and Barcelona. Outside the lab, she is usually writing, playing music, or exploring something creative.",
   },
   {
     name: "Afonso Fernandes",
     role: "PhD Student",
-    photo: afonsoPhoto.url,
+    photo: afonsoPhoto,
     bio: "Psychiatry resident from Braga, Portugal. Afonso studied Medicine at the University of Minho, where he is now pursuing a PhD. With an unusual appetite for complicated things — from the mind and neuroscience to abstract expressionism and Beckett's plays — he aims to understand the human mind a little better, one scan at a time.",
   },
   { name: "PhD Student 3", role: "PhD Student", bio: "Brief research focus — replace with bio.", icon: GraduationCap },
@@ -39,7 +39,7 @@ const current: Member[] = [
   {
     name: "Leonor Abreu",
     role: "Research Assistant",
-    photo: leonorPhoto.url,
+    photo: leonorPhoto,
     bio: "Born in Porto, Leonor has 18+ years of experience in content editing, personal and team development, social impact and investigation. She holds a Master's in Psychology from ISPA (2008) and an MSc in Psychology and Neuroscience of Mental Health from King's College London (2025), where she received the Dean's Award for Outstanding Student Performance in Neuroimaging and Mental Health. Passionate about brain connectivity, she is committed to translating insights on brain health into practical strategies for prevention, treatment and social inclusion, and to fostering communication between researchers, society and policymakers. Outside the lab, she volunteers with ENCONTRAR+SE and loves running, dancing and time with her three boys.",
   },
 ];

@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import logo from "@/assets/brainwaves-logo.png.asset.json";
+import logo from "@/assets/brainwaves-logo.png";
 
 const links = [
   { to: "/", label: "Home" },
@@ -16,7 +16,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/70 backdrop-blur-xl">
       <div className="container-page flex h-16 items-center justify-between gap-6">
         <Link to="/" className="flex items-center gap-3 group">
-          <img src={logo.url} alt="BrainWaves logo" className="h-9 w-9 brain-glow transition-transform group-hover:scale-105" />
+          <img src={logo} alt="BrainWaves logo" className="h-9 w-9 brain-glow transition-transform group-hover:scale-105" />
           <div className="leading-tight">
             <div className="font-display text-base font-semibold text-foreground">BrainWaves</div>
             <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">LaSEEB · ISR-Lisboa</div>
