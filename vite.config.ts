@@ -8,8 +8,10 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 // Static export for GitHub Pages (`bun run build:pages`): prerenders every route to
 // static HTML and skips the nitro/Cloudflare server bundle, which GitHub Pages can't run.
+// The repo is named BrainWavesTecnico.github.io, so GitHub serves it at the domain root
+// (no /<repo-name>/ path segment) — base stays "/".
 const isGithubPagesBuild = process.env.GITHUB_PAGES_BUILD === "true";
-const githubPagesBase = process.env.GITHUB_PAGES_BASE ?? "/BrainWavesTecnico/";
+const githubPagesBase = process.env.GITHUB_PAGES_BASE ?? "/";
 
 export default defineConfig({
   tanstackStart: {
