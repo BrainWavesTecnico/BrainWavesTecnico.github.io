@@ -18,18 +18,18 @@ type News = { date: string; tag: string; title: string; body: string; url?: stri
 
 const items: News[] = [
   {
+    date: "June 2026",
+    tag: "Preprint",
+    title: "Updated preprint: \"Cognitive reserve linked to network-specific brain-ventricle coupling modes\"",
+    body: "Co-first authors Fulvia Francesca Campo and Vânia Miguel, with Elvira Brattico, Vicente Magalhães, Salvatore Nigro, Benedetta Tafuri, Giancarlo Logroscino and Joana Cabral (and the Alzheimer's Disease Neuroimaging Initiative), have revised their bioRxiv preprint linking distinct brain-ventricle coupling modes to cognitive reserve across the Alzheimer's disease spectrum.",
+    url: "https://www.biorxiv.org/content/10.1101/2025.01.04.631289v4",
+  },
+  {
     date: "December 2025",
     tag: "Media",
     title: "\"O mistério das ondas cerebrais\" — Mentes Brilhantes, Observador",
     body: "Joana Cabral is featured in Observador's \"Mentes Brilhantes\" series, discussing how the brain's mysterious activity patterns are altered in neurological and psychiatric disease, and how her research aims to decode these signals.",
     url: "https://observador.pt/programas/mentes-brilhantes/o-misterio-das-ondas-cerebrais/",
-  },
-  {
-    date: "June 2025",
-    tag: "Preprint",
-    title: "Updated preprint: \"Cognitive reserve linked to network-specific brain-ventricle coupling modes\"",
-    body: "Co-first authors Fulvia Francesca Campo and Vânia Miguel, with Elvira Brattico, Vicente Magalhães, Salvatore Nigro, Benedetta Tafuri, Giancarlo Logroscino and Joana Cabral (and the Alzheimer's Disease Neuroimaging Initiative), have revised their bioRxiv preprint linking distinct brain-ventricle coupling modes to cognitive reserve across the Alzheimer's disease spectrum.",
-    url: "https://www.biorxiv.org/content/10.1101/2025.01.04.631289v4",
   },
 ];
 
