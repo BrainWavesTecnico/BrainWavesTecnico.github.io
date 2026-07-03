@@ -649,7 +649,7 @@ const pubs: Pub[] = [
   },
   {
     "year": 2025,
-    "authors": "Campo, Fulvia Francesca; Brattico, Elvira; Miguel, Vânia; Magalhães, Vicente; Nigro, Salvatore; Tafuri, Benedetta; Logroscino, Giancarlo; Cabral, Joana; Alzheimer’s Disease Neuroimaging Initiative",
+    "authors": "Campo, Fulvia Francesca; Miguel, Vânia; Brattico, Elvira; Magalhães, Vicente; Nigro, Salvatore; Tafuri, Benedetta; Logroscino, Giancarlo; Cabral, Joana; Alzheimer’s Disease Neuroimaging Initiative",
     "title": "Cognitive reserve linked to network-specific brain-ventricle coupling modes",
     "venue": "bioRxiv :2025.01.04.631289v4",
     "url": "https://www.biorxiv.org/content/10.1101/2025.01.04.631289v4"

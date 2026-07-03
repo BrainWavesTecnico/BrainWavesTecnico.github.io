@@ -28,7 +28,7 @@ const items: News[] = [
     date: "June 2025",
     tag: "Preprint",
     title: "Updated preprint: \"Cognitive reserve linked to network-specific brain-ventricle coupling modes\"",
-    body: "Fulvia Francesca Campo, Elvira Brattico, Vânia Miguel, Vicente Magalhães, Salvatore Nigro, Benedetta Tafuri, Giancarlo Logroscino and Joana Cabral (with the Alzheimer's Disease Neuroimaging Initiative) have revised their bioRxiv preprint linking distinct brain-ventricle coupling modes to cognitive reserve across the Alzheimer's disease spectrum.",
+    body: "Co-first authors Fulvia Francesca Campo and Vânia Miguel, with Elvira Brattico, Vicente Magalhães, Salvatore Nigro, Benedetta Tafuri, Giancarlo Logroscino and Joana Cabral (and the Alzheimer's Disease Neuroimaging Initiative), have revised their bioRxiv preprint linking distinct brain-ventricle coupling modes to cognitive reserve across the Alzheimer's disease spectrum.",
     url: "https://www.biorxiv.org/content/10.1101/2025.01.04.631289v4",
   },
 ];
