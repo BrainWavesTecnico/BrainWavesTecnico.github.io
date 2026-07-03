@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import logo from "@/assets/brainwaves-logo.png";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const links = [
   { to: "/", label: "Home" },
@@ -22,18 +23,21 @@ export function SiteHeader() {
             <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">LaSEEB · ISR-Lisboa</div>
           </div>
         </Link>
-        <nav className="hidden md:flex items-center gap-1">
-          {links.map((l) => (
-            <Link
-              key={l.to}
-              to={l.to}
-              className="px-3 py-2 text-sm text-muted-foreground rounded-md transition-colors hover:text-foreground hover:bg-secondary/60"
-              activeProps={{ className: "px-3 py-2 text-sm rounded-md text-primary bg-secondary/60" }}
-            >
-              {l.label}
-            </Link>
-          ))}
-        </nav>
+        <div className="flex items-center gap-2">
+          <nav className="hidden md:flex items-center gap-1">
+            {links.map((l) => (
+              <Link
+                key={l.to}
+                to={l.to}
+                className="px-3 py-2 text-sm text-muted-foreground rounded-md transition-colors hover:text-foreground hover:bg-secondary/60"
+                activeProps={{ className: "px-3 py-2 text-sm rounded-md text-primary bg-secondary/60" }}
+              >
+                {l.label}
+              </Link>
+            ))}
+          </nav>
+          <ThemeToggle />
+        </div>
       </div>
       <nav className="md:hidden flex overflow-x-auto gap-1 px-4 pb-2">
         {links.map((l) => (
