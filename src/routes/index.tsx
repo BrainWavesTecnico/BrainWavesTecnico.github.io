@@ -3,6 +3,15 @@ import { PageShell } from "@/components/page-shell";
 import logo from "@/assets/brainwaves-logo.png";
 import teamPhoto from "@/assets/team-photo.jpeg";
 import { ArrowRight } from "lucide-react";
+import type { ReactNode } from "react";
+
+function InlineLink({ href, children }: { href: string; children: ReactNode }) {
+  return (
+    <a href={href} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+      {children}
+    </a>
+  );
+}
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -28,10 +37,15 @@ function Index() {
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">one wave at a time.</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg text-muted-foreground">
-              The BrainWaves Lab is led by Joana Cabral, Assistant Professor at the Department of Bioengineering of
-              Instituto Superior Técnico (IST), University of Lisbon. The lab is part of the Evolutionary Systems and
-              Biomedical Engineering Lab (LaSEEB), a research group of ISR Lisboa at IST, the engineering school of the
-              University of Lisbon.
+              The BrainWaves Lab is led by Joana Cabral, Assistant Professor at the{" "}
+              <InlineLink href="https://dbe.tecnico.ulisboa.pt/en/sobre">Department of Bioengineering</InlineLink> of{" "}
+              <InlineLink href="https://tecnico.ulisboa.pt/en/about-tecnico/">Instituto Superior Técnico (IST)</InlineLink>,{" "}
+              <InlineLink href="https://www.ulisboa.pt/en/info/welcome-ulisboa">University of Lisbon</InlineLink>. The lab
+              is part of the{" "}
+              <InlineLink href="https://www.laseeb.org/">Evolutionary Systems and Biomedical Engineering Lab (LaSEEB)</InlineLink>,
+              a research group of ISR Lisboa at{" "}
+              <InlineLink href="https://tecnico.ulisboa.pt/en/about-tecnico/">IST</InlineLink>, the engineering school of
+              the <InlineLink href="https://www.ulisboa.pt/en/info/welcome-ulisboa">University of Lisbon</InlineLink>.
             </p>
             <p className="mt-4 max-w-xl text-lg text-muted-foreground">
               BrainWaves Lab investigates the large-scale dynamics of brain activity, focusing on how oscillatory
