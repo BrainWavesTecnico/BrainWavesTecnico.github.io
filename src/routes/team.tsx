@@ -4,6 +4,7 @@ import { GraduationCap, User, Plane } from "lucide-react";
 import leonorPhoto from "@/assets/LeonorAbreu.jpg";
 import martaPhoto from "@/assets/MartaXavier.jpg";
 import afonsoPhoto from "@/assets/AfonsoFernandes.jpeg";
+import vaniaPhoto from "@/assets/foto_ohbm.jpeg";
 
 export const Route = createFileRoute("/team")({
   head: () => ({
@@ -32,7 +33,12 @@ const current: Member[] = [
     photo: afonsoPhoto,
     bio: "Psychiatry resident from Braga, Portugal. Afonso studied Medicine at the University of Minho, where he is now pursuing a PhD. With an unusual appetite for complicated things — from the mind and neuroscience to abstract expressionism and Beckett's plays — he aims to understand the human mind a little better, one scan at a time.",
   },
-  { name: "PhD Student 3", role: "PhD Student", bio: "Brief research focus — replace with bio.", icon: GraduationCap },
+  {
+    name: "Vânia Miguel",
+    role: "PhD Student",
+    photo: vaniaPhoto,
+    bio: "With a background in Medicinal Biotechnology (BSc, Polytechnic of Porto) and Bioinformatics (MSc, University of Minho). Vânia is a first-year PhD student in Bioengineering, carrying out her doctoral research in a non-academic environment in partnership with SensiPerception, Lda — the company behind BreastScreening-AI — where she spends two days a week adapting their medical imaging AI pipeline for brain connectivity analysis. Her project, DYNAMIND, combines ultra-fast fMRI, Leading Eigenvector Dynamics Analysis (LEiDA), and machine learning to identify early biomarkers of cognitive decline, at Instituto Superior Técnico (Lisbon). Outside the lab, she is usually playing with her dog or fixing something.",
+  },
   { name: "PhD Student 4", role: "PhD Student", bio: "Brief research focus — replace with bio.", icon: GraduationCap },
   { name: "PhD Student 5", role: "PhD Student", bio: "Brief research focus — replace with bio.", icon: GraduationCap },
   { name: "Master Student", role: "MSc Student", bio: "Thesis topic — replace with bio.", icon: User },
