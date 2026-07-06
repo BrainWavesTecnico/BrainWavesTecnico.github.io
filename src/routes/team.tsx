@@ -37,7 +37,7 @@ const current: Member[] = [
     name: "Vânia Miguel",
     role: "PhD Student",
     photo: vaniaPhoto,
-    bio: "With a background in Medicinal Biotechnology (BSc, Polytechnic of Porto) and Bioinformatics (MSc, University of Minho). Vânia is a first-year PhD student in Bioengineering, carrying out her doctoral research in a non-academic environment in partnership with SensiPerception, Lda — the company behind BreastScreening-AI — where she spends two days a week adapting their medical imaging AI pipeline for brain connectivity analysis. Her project, DYNAMIND, combines ultra-fast fMRI, Leading Eigenvector Dynamics Analysis (LEiDA), and machine learning to identify early biomarkers of cognitive decline, at Instituto Superior Técnico (Lisbon). Outside the lab, she is usually playing with her dog or fixing something.",
+    bio: "First-year Bioengineering PhD student, with a background in Medicinal Biotechnology (BSc) and Bioinformatics (MSc). At Tecnico, her project DYNAMIND combines ultra-fast fMRI, LEiDA, and machine learning to find early biomarkers of cognitive decline — in partnership with SensiPerception, Lda. Outside the lab, she is usually playing with her dog or fixing something.",
   },
   { name: "PhD Student 4", role: "PhD Student", bio: "Brief research focus — replace with bio.", icon: GraduationCap },
   { name: "PhD Student 5", role: "PhD Student", bio: "Brief research focus — replace with bio.", icon: GraduationCap },
