@@ -19,10 +19,34 @@ type News = { date: string; tag: string; title: string; body: string; url?: stri
 const items: News[] = [
   {
     date: "June 2026",
+    tag: "Conference",
+    title: "OHBM Annual Meeting — Bordeaux, France",
+    body: "Joana, Haeun, Giulia and Leonor attended the Annual Meeting of the Organization for Human Brain Mapping (OHBM) in Bordeaux, France.",
+  },
+  {
+    date: "June 2026",
+    tag: "Workshop",
+    title: "Gradients in Brain Organization",
+    body: "Joana gave a talk and participated in a round table about structure-function relationships in the brain, at Château du Feÿ, France.",
+  },
+  {
+    date: "June 2026",
     tag: "Preprint",
     title: "Updated preprint: \"Cognitive reserve linked to network-specific brain-ventricle coupling modes\"",
     body: "Co-first authors Fulvia Francesca Campo and Vânia Miguel, with Elvira Brattico, Vicente Magalhães, Salvatore Nigro, Benedetta Tafuri, Giancarlo Logroscino and Joana Cabral (and the Alzheimer's Disease Neuroimaging Initiative), have revised their bioRxiv preprint linking distinct brain-ventricle coupling modes to cognitive reserve across the Alzheimer's disease spectrum.",
     url: "https://www.biorxiv.org/content/10.1101/2025.01.04.631289v4",
+  },
+  {
+    date: "May 2026",
+    tag: "Grant",
+    title: "New research grant: CSF-MIND",
+    body: "We received a research grant from Braga's Clinical Academic Center to kick off the project CSF-MIND, where we explore the link between cerebrospinal fluid dynamics and resting-state fluctuations in fMRI signals relating with mental function!",
+  },
+  {
+    date: "April 2026",
+    tag: "Milestone",
+    title: "Marta Xavier submitted her PhD thesis!",
+    body: "Our PhD student Marta Xavier submitted her PhD thesis!",
   },
   {
     date: "December 2025",
