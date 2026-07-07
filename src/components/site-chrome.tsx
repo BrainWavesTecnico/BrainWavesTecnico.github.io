@@ -5,6 +5,7 @@ import larsysLogo from "@/assets/LOGO_LARSyS-1024x395.png";
 import tecnicoLogo from "@/assets/LogoTecnico.png";
 import isrLogo from "@/assets/isrLogo.png";
 import laseebLogo from "@/assets/laseeb-300x300.png";
+import torreNorte from "@/assets/TorreNorte.png";
 
 const affiliationLogos = [
   { src: larsysLogo, alt: "LARSyS logo" },
@@ -64,30 +65,21 @@ export function SiteHeader() {
 export function SiteFooter() {
   return (
     <footer className="mt-24 border-t border-border/60">
-      <div className="container-page py-10 grid gap-6 md:grid-cols-3 text-sm text-muted-foreground">
-        <div>
-          <div className="font-display text-foreground font-semibold">BrainWaves Group</div>
-          <p className="mt-2">Part of LaSEEB, ISR-Lisboa, Instituto Superior Técnico, University of Lisbon.</p>
+      <div className="container-page py-10 flex flex-wrap items-center justify-between gap-8">
+        <div className="text-sm text-muted-foreground">
+          <div className="font-display text-foreground font-semibold">BrainWaves Group,</div>
+          <p className="mt-2">@ LaSEEB, ISR-Lisboa, IST, University of Lisbon.</p>
+          <p className="mt-1">North Tower, 6th Floor</p>
+          <p>Av. Rovisco Pais 1, 1049-001 Lisbon, Portugal</p>
         </div>
-        <div>
-          <div className="font-display text-foreground font-semibold">Affiliations</div>
-          <ul className="mt-2 space-y-1">
-            <li>LaSEEB — Evolutionary Systems and Biomedical Engineering Lab</li>
-            <li>ISR-Lisboa · LARSyS</li>
-            <li>Instituto Superior Técnico</li>
-          </ul>
+        <div className="flex flex-wrap items-center gap-6">
+          <img src={torreNorte} alt="North Tower, Instituto Superior Técnico" className="h-20 w-auto object-contain" />
+          {affiliationLogos.map((l) => (
+            <div key={l.alt} className="h-20 rounded-md bg-white px-4 py-2 flex items-center">
+              <img src={l.src} alt={l.alt} className="h-full w-auto object-contain" />
+            </div>
+          ))}
         </div>
-        <div>
-          <div className="font-display text-foreground font-semibold">Contact</div>
-          <p className="mt-2">Av. Rovisco Pais 1, 1049-001 Lisbon, Portugal</p>
-        </div>
-      </div>
-      <div className="border-t border-border/60 py-6 flex flex-wrap items-center justify-center gap-6">
-        {affiliationLogos.map((l) => (
-          <div key={l.alt} className="h-12 rounded-md bg-white px-3 py-1.5 flex items-center">
-            <img src={l.src} alt={l.alt} className="h-full w-auto object-contain" />
-          </div>
-        ))}
       </div>
       <div className="border-t border-border/60 py-4 text-center text-xs text-muted-foreground">
         © {new Date().getFullYear()} BrainWaves Group. All rights reserved.
