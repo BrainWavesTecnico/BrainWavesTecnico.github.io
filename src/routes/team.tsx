@@ -5,6 +5,7 @@ import leonorPhoto from "@/assets/LeonorAbreu.jpg";
 import martaPhoto from "@/assets/MartaXavier.jpg";
 import afonsoPhoto from "@/assets/AfonsoFernandes.jpeg";
 import vaniaPhoto from "@/assets/foto_ohbm.jpeg";
+import haeunPhoto from "@/assets/hauen.jpeg";
 
 export const Route = createFileRoute("/team")({
   head: () => ({
@@ -42,7 +43,7 @@ const current: Member[] = [
   {
     name: "Haeun Sun",
     role: "PhD Student",
-    icon: GraduationCap,
+    photo: haeunPhoto,
     bio: "A PhD student from South Korea with BSc and MSc in physics. To contribute to overcoming psychiatric disease with physical solutions, entered the field of neuroscience and biomedical engineering. Working on a project to incorporate the CSF dynamics into the brain model for optimization of neurostimulation.",
   },
   { name: "PhD Student 5", role: "PhD Student", bio: "Brief research focus — replace with bio.", icon: GraduationCap },
