@@ -18,6 +18,9 @@ type Talk = { year: number; date: string; title: string; venue: string; type: st
 
 const talks: Talk[] = [
   // 2026
+  { year: 2026, date: "12 June 2026", title: "Functional modes of cognition resonate beyond neurons alone", venue: "Colloquium 'Mechanisms of Whole-Brain Communication', Paris Brain Institute (PBI) · Paris, France", type: "Invited talk" },
+  { year: 2026, date: "11 June 2026", title: "Resonant waves shaping functional Gradients", venue: "Gradients in Brain Organization Workshop · Château du Feÿ, France", type: "Invited talk" },
+  { year: 2026, date: "12 May 2026", title: "Pressure Waves and Phase Locks captured with single-slice fMRI", venue: "International Society for Magnetic Resonance in Medicine (ISMRM) Annual Meeting · Cape Town, South Africa", type: "Symposium" },
   { year: 2026, date: "24 March 2026", title: "Ondas en el cerebro: de redes neuronales a dinámicas de continuo", venue: "Encuentros de biología teórica, Museo Nacional de Ciencias Naturales · Madrid, Spain", type: "Invited talk" },
   { year: 2026, date: "19 March 2026", title: "Beyond Networks: Functional Connectivity as Eigenmode Resonance", venue: "Making Connections Seminar Series — Brains and other Complex Systems · Online", type: "Invited talk" },
   { year: 2026, date: "13 February 2026", title: "From Brain Dynamics to Mathematical Frameworks", venue: "Centre for Mathematical Analysis, Geometry, and Dynamical Systems · Lisbon, Portugal", type: "Invited talk" },
