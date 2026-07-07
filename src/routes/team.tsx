@@ -39,7 +39,12 @@ const current: Member[] = [
     photo: vaniaPhoto,
     bio: "First-year Bioengineering PhD student, with a background in Medicinal Biotechnology (BSc) and Bioinformatics (MSc). At Tecnico, her project DYNAMIND combines ultra-fast fMRI, LEiDA, and machine learning to find early biomarkers of cognitive decline — in partnership with SensiPerception, Lda. Outside the lab, she is usually playing with her dog or fixing something.",
   },
-  { name: "PhD Student 4", role: "PhD Student", bio: "Brief research focus — replace with bio.", icon: GraduationCap },
+  {
+    name: "Haeun Sun",
+    role: "PhD Student",
+    icon: GraduationCap,
+    bio: "A PhD student from South Korea with BSc and MSc in physics. To contribute to overcoming psychiatric disease with physical solutions, entered the field of neuroscience and biomedical engineering. Working on a project to incorporate the CSF dynamics into the brain model for optimization of neurostimulation.",
+  },
   { name: "PhD Student 5", role: "PhD Student", bio: "Brief research focus — replace with bio.", icon: GraduationCap },
   { name: "Master Student", role: "MSc Student", bio: "Thesis topic — replace with bio.", icon: User },
   {
