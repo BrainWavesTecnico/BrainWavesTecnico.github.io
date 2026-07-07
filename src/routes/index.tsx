@@ -35,21 +35,21 @@ function Index() {
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">one wave at a time.</span>
             </h1>
             <p className="mt-6 max-w-xl text-base text-muted-foreground">
-              The BrainWaves research group is led by Joana Cabral, Assistant Professor at the{" "}
-              <InlineLink href="https://dbe.tecnico.ulisboa.pt/en/sobre">Department of Bioengineering</InlineLink> of{" "}
-              <InlineLink href="https://tecnico.ulisboa.pt/en/about-tecnico/">Instituto Superior Técnico (IST)</InlineLink>,{" "}
-              <InlineLink href="https://www.ulisboa.pt/en/info/welcome-ulisboa">University of Lisbon</InlineLink>. The group
-              is part of the{" "}
+              The BrainWaves research group, led by Joana Cabral, is part of the{" "}
               <InlineLink href="https://www.laseeb.org/">Evolutionary Systems and Biomedical Engineering Lab (LaSEEB)</InlineLink>,
-              a research group of ISR Lisboa at{" "}
-              <InlineLink href="https://tecnico.ulisboa.pt/en/about-tecnico/">IST</InlineLink>, the engineering school of
-              the <InlineLink href="https://www.ulisboa.pt/en/info/welcome-ulisboa">University of Lisbon</InlineLink>.
+              at the <InlineLink href="https://tecnico.ulisboa.pt/en/about-tecnico/">Instituto Superior Técnico (IST)</InlineLink>,
+              the engineering school of the{" "}
+              <InlineLink href="https://www.ulisboa.pt/en/info/welcome-ulisboa">University of Lisbon</InlineLink>. It is
+              integrated in the Institute for Systems and Robotics (ISR-Lisboa), a research unit from the{" "}
+              <InlineLink href="https://groups.tecnico.ulisboa.pt/~larsys.daemon/">Laboratory for Robotics and Engineering Systems (LARSyS)</InlineLink>{" "}
+              in the LIFE Thematic Line.
             </p>
             <p className="mt-4 max-w-xl text-base text-muted-foreground">
-              BrainWaves research group investigates the large-scale dynamics of brain activity, focusing on how oscillatory
-              patterns and wave-like phenomena shape brain function over time. The group combines computational modelling,
-              neuroimaging analysis, and signal processing methods to explore brain network dynamics, cerebrospinal
-              fluid flow, and their relevance to cognition and neurological health.
+              BrainWaves research group investigates brain dynamics, focusing on emergent properties, such as collective
+              oscillations, long-range correlations, resonance and non-stationary behaviour. The group combines neuroimaging
+              analysis and signal processing with dynamical system's theory, computational modelling, and physical
+              experiments to understand the mechanisms behind the observed dynamics and their link with cognition and
+              mental health.
             </p>
           </div>
           <div className="relative flex justify-center">
