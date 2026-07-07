@@ -25,20 +25,6 @@ const pubs: Pub[] = [
     "url": "https://scholar.google.com/scholar?q=Role%20of%20local%20network%20oscillations%20in%20resting-state%20functional%20connectivity"
   },
   {
-    "year": 2011,
-    "authors": "Cabral, Joana; Hugues, Etienne; Deco, Gustavo",
-    "title": "Simulated functional networks in health and schizophrenia: a graph theoretical approach",
-    "venue": "BMC neuroscience 12(Suppl 1):P63",
-    "url": "https://scholar.google.com/scholar?q=Simulated%20functional%20networks%20in%20health%20and%20schizophrenia%3A%20a%20graph%20theoretical%20approach"
-  },
-  {
-    "year": 2009,
-    "authors": "Cabral, Joana; Hugues, Etienne; Deco, Gustavo",
-    "title": "Inter-cortical time delays shape the brain in dynamical networks during rest",
-    "venue": "BMC Neuroscience 10(Suppl 1):P70",
-    "url": "https://scholar.google.com/scholar?q=Inter-cortical%20time%20delays%20shape%20the%20brain%20in%20dynamical%20networks%20during%20rest"
-  },
-  {
     "year": 2012,
     "authors": "Cabral, J; Kringelbach, ML; Deco, G",
     "title": "Functional graph alterations in schizophrenia: a result from a global anatomic decoupling?",
@@ -46,32 +32,11 @@ const pubs: Pub[] = [
     "url": "https://scholar.google.com/scholar?q=Functional%20graph%20alterations%20in%20schizophrenia%3A%20a%20result%20from%20a%20global%20anatomic%20decoupling%3F"
   },
   {
-    "year": 2008,
-    "authors": "Secca, Mario Forjaz; Fernandes, HM; Cabral, JR; Leal, A",
-    "title": "Optimization of fMRI processing parameters for simutaneous acquisition of EEG/fMRI in focal epilepsy",
-    "venue": "14th Nordic-Baltic Conference on Biomedical Engineering and Medical Physics: NBC 2008 16–20 June 2008 Riga, Latvia :505-508",
-    "url": "https://scholar.google.com/scholar?q=Optimization%20of%20fMRI%20processing%20parameters%20for%20simutaneous%20acquisition%20of%20EEG/fMRI%20in%20focal%20epilepsy"
-  },
-  {
-    "year": 2007,
-    "authors": "Forjaz Secca, Mario; Leal, A; Cabral, J; Fernandes, H",
-    "title": "Comparison of methods and co-registration maps of EEG and fMRI in Occipital Lobe Epilepsy",
-    "venue": "11th Mediterranean Conference on Medical and Biomedical Engineering and Computing 2007 :505-508",
-    "url": "https://scholar.google.com/scholar?q=Comparison%20of%20methods%20and%20co-registration%20maps%20of%20EEG%20and%20fMRI%20in%20Occipital%20Lobe%20Epilepsy"
-  },
-  {
     "year": 2012,
     "authors": "Cabral, Joana; Hugues, Etienne; Kringelbach, Morten L; Deco, Gustavo",
     "title": "Modeling the outcome of structural disconnection on resting-state functional connectivity",
     "venue": "Neuroimage 62(3):1342-1353",
     "url": "https://scholar.google.com/scholar?q=Modeling%20the%20outcome%20of%20structural%20disconnection%20on%20resting-state%20functional%20connectivity"
-  },
-  {
-    "year": 2013,
-    "authors": "Cabral, Joana; Fernandes, Henrique; Van Hartevelt, Tim; James, Anthony; Kringelbach, Morten L; Deco, Gustavo",
-    "title": "Disrupted connectivity in schizophrenia: modelling the impact of structural connectivity changes on the dynamics of spontaneous functional networks",
-    "venue": "BMC Neuroscience 14(Suppl 1):P100",
-    "url": "https://scholar.google.com/scholar?q=Disrupted%20connectivity%20in%20schizophrenia%3A%20modelling%20the%20impact%20of%20structural%20connectivity%20changes%20on%20the%20dynamics%20of%20spontaneous%20functional%20networks"
   },
   {
     "year": 2013,
@@ -172,13 +137,6 @@ const pubs: Pub[] = [
     "url": "https://scholar.google.com/scholar?q=Whole-brain%20multimodal%20neuroimaging%20model%20using%20serotonin%20receptor%20maps%20explains%20non-linear%20functional%20effects%20of%20LSD"
   },
   {
-    "year": 2015,
-    "authors": "Fernandes, HM; Van Hartevelt, TJ; Boccard, SGJ; Owen, SLF; Cabral, J; Deco, G; Green, AL; Fitzgerald, JJ; Aziz, TZ; Kringelbach, ML",
-    "title": "Research Archive and Digital Asset Repository",
-    "venue": "New J. Phys 17:015001",
-    "url": "https://scholar.google.com/scholar?q=Research%20Archive%20and%20Digital%20Asset%20Repository"
-  },
-  {
     "year": 2019,
     "authors": "Stevner, ABA; Vidaurre, Diego; Cabral, Joana; Rapuano, K; Nielsen, Søren Føns Vind; Tagliazucchi, Enzo; Laufs, Helmut; Vuust, Peter; Deco, Gustavo; Woolrich, Mark W",
     "title": "Discovery of key whole-brain transitions and dynamics during human wakefulness and non-REM sleep",
@@ -228,13 +186,6 @@ const pubs: Pub[] = [
     "url": "https://scholar.google.com/scholar?q=The%20power%20of%20smiling%3A%20the%20adult%20brain%20networks%20underlying%20learned%20infant%20emotionality"
   },
   {
-    "year": 2019,
-    "authors": "Cruzat, Josephine; Cabral, Joana; Knudsen, Gitte Moos; Carhart-Harris, Robin; Whybrow, Peter C; Logothetis, Nikos K; Kringelback, Morten L; Deco, Gustavo",
-    "title": "Mechanisms of the non-linear interactions between the neuronal and neurotransmitter systems explained by causal whole-brain modeling",
-    "venue": "Conference on Cognitive Computational Neuroscience (CCN 2019) :295-298",
-    "url": "https://scholar.google.com/scholar?q=Mechanisms%20of%20the%20non-linear%20interactions%20between%20the%20neuronal%20and%20neurotransmitter%20systems%20explained%20by%20causal%20whole-brain%20modeling"
-  },
-  {
     "year": 2020,
     "authors": "Kringelbach, Morten L; Cruzat, Josephine; Cabral, Joana; Knudsen, Gitte Moos; Carhart-Harris, Robin; Whybrow, Peter C; Logothetis, Nikos K; Deco, Gustavo",
     "title": "Dynamic coupling of whole-brain neuronal and neurotransmitter systems",
@@ -271,27 +222,6 @@ const pubs: Pub[] = [
   },
   {
     "year": 2020,
-    "authors": "Bonetti, Leonardo; Brattico, E; Carlomagno, F; Cabral, J; Stevner, A; Deco, G; Whybrow, PC; Pearce, M; Pantazis, D; Vuust, P",
-    "title": "Spatiotemporal brain dynamics during recognition of the music of Johann Sebastian Bach",
-    "venue": "BioRxiv 27:9252-9261",
-    "url": "https://scholar.google.com/scholar?q=Spatiotemporal%20brain%20dynamics%20during%20recognition%20of%20the%20music%20of%20Johann%20Sebastian%20Bach"
-  },
-  {
-    "year": 2020,
-    "authors": "Lopes, Ana R; Letournel, Anna; Cabral, Joana",
-    "title": "Altered resting-state network dynamics in Schizophrenia",
-    "venue": "medRxiv :2020.07. 21.20157347",
-    "url": "https://scholar.google.com/scholar?q=Altered%20resting-state%20network%20dynamics%20in%20Schizophrenia"
-  },
-  {
-    "year": 2020,
-    "authors": "Da Mota, Patricia Alves; Stark, Eloise A; Fernandes, Henrique M; Ahrends, Christine; Cabral, Joana; Gebauer, Line; Happé, Francesca; Vuust, Peter; Kringelbach, Morten L",
-    "title": "Sweet anticipation: Predictability of familiar music in autism",
-    "venue": "bioRxiv :2020.08. 03.233668",
-    "url": "https://scholar.google.com/scholar?q=Sweet%20anticipation%3A%20Predictability%20of%20familiar%20music%20in%20autism"
-  },
-  {
-    "year": 2020,
     "authors": "Alonso Martínez, Sonsoles; Deco, Gustavo; Ter Horst, Gert J; Cabral, Joana",
     "title": "The dynamics of functional brain networks associated with depressive symptoms in a nonclinical sample",
     "venue": "Frontiers in neural circuits 14:570583",
@@ -303,13 +233,6 @@ const pubs: Pub[] = [
     "title": "Computational models in electroencephalography",
     "venue": "Brain topography 35(1):142-161",
     "url": "https://scholar.google.com/scholar?q=Computational%20models%20in%20electroencephalography"
-  },
-  {
-    "year": 2020,
-    "authors": "Gomes, Maria T; Fernandes, Henrique M; Cabral, Joana",
-    "title": "Deep brain stimulation modulates the dynamics of resting-state networks in patients with Parkinson’s Disease",
-    "venue": "bioRxiv :2020.11. 04.368274",
-    "url": "https://scholar.google.com/scholar?q=Deep%20brain%20stimulation%20modulates%20the%20dynamics%20of%20resting-state%20networks%20in%20patients%20with%20Parkinson%E2%80%99s%20Disease"
   },
   {
     "year": 2022,
@@ -536,46 +459,11 @@ const pubs: Pub[] = [
     "url": "https://scholar.google.com/scholar?q=Dynamic%20Functional%20Connectivity%20in%20Pediatric%20Mild%20Traumatic%20Brain%20Injury"
   },
   {
-    "year": 2014,
-    "authors": "Fernandes, Henrique; Cabral, Joana; Petersen, Mikkel; van Hartevelt, Tim Johannes; James, Anthony C; Deco, Gustavo; Kringelbach, Morten L",
-    "title": "Understanding the neurobiology of early-onset bipolar disorder with psychosis",
-    "venue": "FENS Spring Brain conference: Controlling Neurons, Circuits and Behaviour",
-    "url": "https://scholar.google.com/scholar?q=Understanding%20the%20neurobiology%20of%20early-onset%20bipolar%20disorder%20with%20psychosis"
-  },
-  {
-    "year": 2013,
-    "authors": "Fernandes, Henrique; Cabral, Joana; Petersen, Mikkel; van Hartevelt, Tim Johannes; James, Anthony C; Deco, Gustavo; Kringelbach, Morten L",
-    "title": "Signiﬁcant changes in local connectivity in early-onset bipolar disorder with psychosis",
-    "venue": "Society for Neuroscience 43rd Annual Meeting",
-    "url": "https://scholar.google.com/scholar?q=Signi%EF%AC%81cant%20changes%20in%20local%20connectivity%20in%20early-onset%20bipolar%20disorder%20with%20psychosis"
-  },
-  {
     "year": 2023,
     "authors": "van der Horn, Harm J; de Koning, Myrthe E; Visser, Koen; Kok, Marius GJ; Spikman, Jacoba M; Scheenen, Myrthe E; Renken, Remco J; Calhoun, Vince D; Vergara, Victor M; Cabral, Joana",
     "title": "Dynamic phase-locking states and personality in sub-acute mild traumatic brain injury: An exploratory study",
     "venue": "PloS one 18(12):e0295984",
     "url": "https://scholar.google.com/scholar?q=Dynamic%20phase-locking%20states%20and%20personality%20in%20sub-acute%20mild%20traumatic%20brain%20injury%3A%20An%20exploratory%20study"
-  },
-  {
-    "year": 2023,
-    "authors": "Torres, Felipe; Otero, Monica; Lea-Carnall, Caroline; Weinstein, Alejandro; Cabral, Joana; El-Deredy, Wael",
-    "title": "EEG FREQUENCY BANDS AND FUNCTIONAL CONNECTIVITY DYNAMICS EMERGE FROM A 40HZ BRAIN MODEL OF PHASE OSCILLATORS",
-    "venue": "IBRO Neuroscience Reports 15:S802-S803",
-    "url": "https://scholar.google.com/scholar?q=EEG%20FREQUENCY%20BANDS%20AND%20FUNCTIONAL%20CONNECTIVITY%20DYNAMICS%20EMERGE%20FROM%20A%2040HZ%20BRAIN%20MODEL%20OF%20PHASE%20OSCILLATORS"
-  },
-  {
-    "year": 2023,
-    "authors": "Otero, Monica; Lea-Carnall, Caroline; Torres, Felipe; Weinstein, Alejandro; Cabral, Joana; El-Deredy, Wael",
-    "title": "MODELLING NEURAL ENTRAINMENT",
-    "venue": "IBRO Neuroscience Reports 15:S793",
-    "url": "https://scholar.google.com/scholar?q=MODELLING%20NEURAL%20ENTRAINMENT"
-  },
-  {
-    "year": 2023,
-    "authors": "Gatica, Marilyn; Torres, Felipe; Otero, Monica; Guevara, Pamela; Weinstein, Alejandro; Cabral, Joana; Cortes, Jesus; El-Deredy, Wael",
-    "title": "REGIONAL METASTABILITY OF WHOLE-BRAIN KURAMOTO NETWORKS ACROSS MULTIPLE CONNECTOME SCALES",
-    "venue": "IBRO Neuroscience Reports 15:S802",
-    "url": "https://scholar.google.com/scholar?q=REGIONAL%20METASTABILITY%20OF%20WHOLE-BRAIN%20KURAMOTO%20NETWORKS%20ACROSS%20MULTIPLE%20CONNECTOME%20SCALES"
   },
   {
     "year": 2024,
@@ -590,13 +478,6 @@ const pubs: Pub[] = [
     "title": "The flattening of spacetime hierarchy of the DMT brain state is characterised by harmonic decomposition of spacetime (HADES) framework",
     "venue": "National Science Review 11(5)",
     "url": "https://scholar.google.com/scholar?q=The%20flattening%20of%20spacetime%20hierarchy%20of%20the%20DMT%20brain%20state%20is%20characterised%20by%20harmonic%20decomposition%20of%20spacetime%20%28HADES%29%20framework"
-  },
-  {
-    "year": 2023,
-    "authors": "Vidaurre, I Herrero; Martínez-Zalacaín, I; Juaneda-Seguí, A; De la Peña-Arteaga, V; Chavarría-Elizondo, P; Morgado, P; Menchón, JM; Picó-Pérez, M; Fullana, MA; Cabral, J",
-    "title": "Dynamic functional-connectivity analysis of resting-state whole-brain functional data in anxious individuals and its relationship with psychometry testing via deep learning",
-    "venue": "Neuroscience Applied 2:102659",
-    "url": "https://scholar.google.com/scholar?q=Dynamic%20functional-connectivity%20analysis%20of%20resting-state%20whole-brain%20functional%20data%20in%20anxious%20individuals%20and%20its%20relationship%20with%20psychometry%20testing%20via%20deep%20learning"
   },
   {
     "year": 2025,
@@ -660,13 +541,6 @@ const pubs: Pub[] = [
     "title": "Trajectories of intrinsic connectivity one year post pediatric mild traumatic brain injury: Neural injury superimposed on neurodevelopment",
     "venue": "Cortex 184:120-130",
     "url": "https://scholar.google.com/scholar?q=Trajectories%20of%20intrinsic%20connectivity%20one%20year%20post%20pediatric%20mild%20traumatic%20brain%20injury%3A%20Neural%20injury%20superimposed%20on%20neurodevelopment"
-  },
-  {
-    "year": 2023,
-    "authors": "Blair, David Sutherland; Soriano-Mas, Carles; Cabral, Joana; Moreira, Pedro; Morgado, Pedro; Deco, Gustavo",
-    "title": "Complexity changes in functional state dynamics suggest focal connectivity reductions (vol 16, 958706, 2022)",
-    "venue": "FRONTIERS IN HUMAN NEUROSCIENCE 17",
-    "url": "https://scholar.google.com/scholar?q=Complexity%20changes%20in%20functional%20state%20dynamics%20suggest%20focal%20connectivity%20reductions%20%28vol%2016%2C%20958706%2C%202022%29"
   },
   {
     "year": 2025,
