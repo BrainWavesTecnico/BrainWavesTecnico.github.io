@@ -35,10 +35,10 @@ function Index() {
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">one wave at a time.</span>
             </h1>
             <p className="mt-6 max-w-xl text-base text-muted-foreground">
-              The BrainWaves Lab is led by Joana Cabral, Assistant Professor at the{" "}
+              The BrainWaves research group is led by Joana Cabral, Assistant Professor at the{" "}
               <InlineLink href="https://dbe.tecnico.ulisboa.pt/en/sobre">Department of Bioengineering</InlineLink> of{" "}
               <InlineLink href="https://tecnico.ulisboa.pt/en/about-tecnico/">Instituto Superior Técnico (IST)</InlineLink>,{" "}
-              <InlineLink href="https://www.ulisboa.pt/en/info/welcome-ulisboa">University of Lisbon</InlineLink>. The lab
+              <InlineLink href="https://www.ulisboa.pt/en/info/welcome-ulisboa">University of Lisbon</InlineLink>. The group
               is part of the{" "}
               <InlineLink href="https://www.laseeb.org/">Evolutionary Systems and Biomedical Engineering Lab (LaSEEB)</InlineLink>,
               a research group of ISR Lisboa at{" "}
@@ -46,8 +46,8 @@ function Index() {
               the <InlineLink href="https://www.ulisboa.pt/en/info/welcome-ulisboa">University of Lisbon</InlineLink>.
             </p>
             <p className="mt-4 max-w-xl text-base text-muted-foreground">
-              BrainWaves Lab investigates the large-scale dynamics of brain activity, focusing on how oscillatory
-              patterns and wave-like phenomena shape brain function over time. The lab combines computational modelling,
+              BrainWaves research group investigates the large-scale dynamics of brain activity, focusing on how oscillatory
+              patterns and wave-like phenomena shape brain function over time. The group combines computational modelling,
               neuroimaging analysis, and signal processing methods to explore brain network dynamics, cerebrospinal
               fluid flow, and their relevance to cognition and neurological health.
             </p>
