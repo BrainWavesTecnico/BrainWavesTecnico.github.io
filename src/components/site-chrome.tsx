@@ -1,6 +1,17 @@
 import { Link } from "@tanstack/react-router";
 import logo from "@/assets/brainwaves-logo.png";
 import { ThemeToggle } from "@/components/theme-toggle";
+import larsysLogo from "@/assets/LOGO_LARSyS-1024x395.png";
+import tecnicoLogo from "@/assets/LogoTecnico.png";
+import isrLogo from "@/assets/isrLogo.png";
+import laseebLogo from "@/assets/laseeb-300x300.png";
+
+const affiliationLogos = [
+  { src: larsysLogo, alt: "LARSyS logo" },
+  { src: tecnicoLogo, alt: "Instituto Superior Técnico logo" },
+  { src: isrLogo, alt: "ISR-Lisboa logo" },
+  { src: laseebLogo, alt: "LaSEEB logo" },
+];
 
 const links = [
   { to: "/", label: "Home" },
@@ -70,6 +81,13 @@ export function SiteFooter() {
           <div className="font-display text-foreground font-semibold">Contact</div>
           <p className="mt-2">Av. Rovisco Pais 1, 1049-001 Lisbon, Portugal</p>
         </div>
+      </div>
+      <div className="border-t border-border/60 py-6 flex flex-wrap items-center justify-center gap-6">
+        {affiliationLogos.map((l) => (
+          <div key={l.alt} className="h-12 rounded-md bg-white px-3 py-1.5 flex items-center">
+            <img src={l.src} alt={l.alt} className="h-full w-auto object-contain" />
+          </div>
+        ))}
       </div>
       <div className="border-t border-border/60 py-4 text-center text-xs text-muted-foreground">
         © {new Date().getFullYear()} BrainWaves Group. All rights reserved.
