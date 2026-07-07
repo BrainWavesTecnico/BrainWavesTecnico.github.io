@@ -40,7 +40,9 @@ function Index() {
               at the <InlineLink href="https://tecnico.ulisboa.pt/en/about-tecnico/">Instituto Superior Técnico (IST)</InlineLink>,
               the engineering school of the{" "}
               <InlineLink href="https://www.ulisboa.pt/en/info/welcome-ulisboa">University of Lisbon</InlineLink>. It is
-              integrated in the Institute for Systems and Robotics (ISR-Lisboa), a research unit from the{" "}
+              integrated in the{" "}
+              <InlineLink href="https://isr.tecnico.ulisboa.pt/">Institute for Systems and Robotics (ISR-Lisboa)</InlineLink>,
+              a research unit from the{" "}
               <InlineLink href="https://groups.tecnico.ulisboa.pt/~larsys.daemon/">Laboratory for Robotics and Engineering Systems (LARSyS)</InlineLink>{" "}
               in the LIFE Thematic Line.
             </p>
