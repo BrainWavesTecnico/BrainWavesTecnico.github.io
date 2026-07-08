@@ -21,15 +21,18 @@ const education = [
 ];
 
 const positions = [
-  { role: "Assistant Professor (FCT Tenure+)", place: "Dept. of Bioengineering & ISR-Lisboa/LARSyS, Instituto Superior Técnico, Universidade de Lisboa", years: "2025–present" },
-  { role: "Principal Investigator", place: "LaSEEB, ISR-Lisboa/LARSyS, Lisbon, Portugal", years: "2022–present" },
+  { role: "Assistant Professor (FCT Tenure+)", place: "Dept. of Bioengineering, Instituto Superior Técnico, Universidade de Lisboa", years: "2025–present" },
+  { role: "Principal Investigator", place: "LaSEEB, ISR-Lisboa/LARSyS, Lisbon, Portugal", years: "2025–present" },
   { role: "La Caixa Junior Leader Fellow (BRAINSTIM)", place: "Life and Health Sciences Research Institute (ICVS), Universidade do Minho, Braga", years: "2022–2025" },
-  { role: "Visiting Researcher", place: "Champalimaud Foundation, Lisbon, Portugal", years: "2018–present" },
-  { role: "Visiting Researcher", place: "University of Oxford, UK", years: "2017–present" },
   { role: "Assistant Researcher", place: "Life and Health Sciences Research Institute (ICVS), Universidade do Minho, Braga", years: "2017–2022" },
   { role: "Postdoctoral Researcher (ERC Consolidator project)", place: "University of Oxford, UK", years: "2014–2017" },
   { role: "Postdoctoral Researcher (ERC Advanced project)", place: "Universitat Pompeu Fabra, Barcelona, Spain", years: "2012–2014" },
   { role: "PhD Researcher, Computational Neuroscience Group", place: "Universitat Pompeu Fabra, Barcelona, Spain", years: "2008–2012" },
+];
+
+const visitingPositions = [
+  { role: "Visiting Researcher", place: "Champalimaud Foundation, Lisbon, Portugal", years: "2018–present" },
+  { role: "Visiting Researcher", place: "University of Oxford, UK", years: "2017–present" },
 ];
 
 const projects = [
@@ -58,7 +61,7 @@ function CvPage() {
           <div className="glass-card p-6">
             <h2 className="font-display text-xl font-semibold">Curriculum Vitae</h2>
             <p className="mt-2 text-sm text-muted-foreground">
-              Joana Cabral (MSc Biomedical Engineering, PhD Computational Neuroscience) is Assistant Professor in the Department of Bioengineering and the Institute for Systems and Robotics (ISR-Lisboa/LARSyS) at Instituto Superior Técnico (IST), Universidade de Lisboa, where she holds a tenure track position under the FCT Tenure+ Programme. She leads her team at the Evolutionary Systems and Biomedical Engineering Lab (LaSEEB). Her research focuses on understanding the neural mechanisms underlying large-scale brain dynamics, with emphasis on how oscillatory brain dynamics organise functional brain networks across states of health and disease. She developed LEiDA (Leading Eigenvector Dynamics Analysis), a method used by over 50 research groups worldwide, and the Metastable Oscillatory Modes (MOMs) framework. She was awarded the L'Oréal UNESCO Award for Women in Science (Portugal) in 2019, and has authored over 70 peer-reviewed publications.
+              Joana Cabral (MSc Biomedical Engineering, PhD Computational Neuroscience) is Assistant Professor in the Department of Bioengineering at Instituto Superior Técnico (IST), Universidade de Lisboa, where she holds a tenure track position under the FCT Tenure+ Programme. She leads her team at the Evolutionary Systems and Biomedical Engineering Lab (LaSEEB). Her research focuses on understanding the neural mechanisms underlying large-scale brain dynamics, with emphasis on how oscillatory brain dynamics organise functional brain networks across states of health and disease. She developed LEiDA (Leading Eigenvector Dynamics Analysis), a method used by over 50 research groups worldwide, and the Metastable Oscillatory Modes (MOMs) framework. She was awarded the L'Oréal UNESCO Award for Women in Science (Portugal) in 2019, and has authored over 70 peer-reviewed publications.
             </p>
             <a href={cvPdf} download className="mt-4 inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground">
               <Download className="h-4 w-4" /> Download full CV (PDF)
@@ -79,7 +82,17 @@ function CvPage() {
             <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
               {positions.map((p) => (
                 <li key={`${p.role}-${p.years}`}>
-                  <span className="text-foreground">{p.role}</span> — {p.place}, {p.years}
+                  <span className="text-foreground">{p.years}</span> — {p.role}, {p.place}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="glass-card p-6">
+            <h3 className="font-semibold">Visiting Positions</h3>
+            <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+              {visitingPositions.map((p) => (
+                <li key={`${p.role}-${p.years}`}>
+                  <span className="text-foreground">{p.years}</span> — {p.role}, {p.place}
                 </li>
               ))}
             </ul>
