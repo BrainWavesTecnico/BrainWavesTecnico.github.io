@@ -16,6 +16,11 @@ export const Route = createFileRoute("/talks")({
 
 type Talk = { year: number; date: string; title: string; venue: string; type: string; url?: string };
 
+const upcoming: Talk[] = [
+  { year: 2026, date: "14 July 2026", title: "Constraining large-scale models of brain dynamics with local biological properties: Methods and applications", venue: "Organisation for Computational Neuroscience (OCNS) Meeting · Halifax, Canada (remote presentation)", type: "Workshop", url: "https://www.cnsorg.org/cns-2026-quick" },
+  { year: 2026, date: "17–20 November 2026", title: "Workshop on Whole-Brain Models and High-Order Interactions for Brain Health", venue: "Universitat de les Illes Balears · Palma de Mallorca, Spain", type: "Invited talk", url: "https://rubenherzog.github.io/workshop-wbm-hoi-2026/" },
+];
+
 const talks: Talk[] = [
   // 2026
   { year: 2026, date: "12 June 2026", title: "Functional modes of cognition resonate beyond neurons alone", venue: "Colloquium 'Mechanisms of Whole-Brain Communication', Paris Brain Institute (PBI) · Paris, France", type: "Invited talk" },
@@ -129,6 +134,35 @@ const talks: Talk[] = [
   { year: 2011, date: "June 2011", title: "Exploring the phase dynamics of neuronal oscillation through the Kuramoto model", venue: "Computational, Cognitive and Clinical Neuroimaging Laboratory (C3NL), Imperial College · London, UK", type: "Invited talk" },
 ];
 
+function TalkItem({ t }: { t: Talk }) {
+  const content = (
+    <>
+      <div className="shrink-0 h-10 w-10 rounded-full bg-secondary flex items-center justify-center text-primary">
+        <Mic className="h-5 w-5" />
+      </div>
+      <div className="flex-1">
+        <div className="flex flex-wrap items-center gap-2 text-xs uppercase tracking-wider">
+          <span className="text-muted-foreground">{t.date}</span>
+          <span className="rounded-full bg-secondary px-2 py-0.5 text-primary">{t.type}</span>
+        </div>
+        <div className="mt-1 font-semibold">{t.title}</div>
+        <div className="text-sm text-muted-foreground mt-0.5">{t.venue}</div>
+      </div>
+    </>
+  );
+  return (
+    <li className="glass-card p-5">
+      {t.url ? (
+        <a href={t.url} target="_blank" rel="noopener noreferrer" className="group flex items-start gap-4">
+          {content}
+        </a>
+      ) : (
+        <div className="flex items-start gap-4">{content}</div>
+      )}
+    </li>
+  );
+}
+
 function TalksPage() {
   const byYear = talks.reduce<Record<number, Talk[]>>((acc, t) => {
     (acc[t.year] ||= []).push(t);
@@ -140,38 +174,19 @@ function TalksPage() {
     <PageShell>
       <PageHeader eyebrow="Outreach" title="Talks" description="Invited talks, keynotes and conference presentations." />
       <div className="container-page py-12 space-y-12">
+        {upcoming.length > 0 && (
+          <section>
+            <h2 className="text-xl font-semibold mb-4 text-primary">Upcoming talks</h2>
+            <ul className="space-y-3">
+              {upcoming.map((t, i) => <TalkItem key={i} t={t} />)}
+            </ul>
+          </section>
+        )}
         {years.map((y) => (
           <section key={y}>
             <h2 className="text-xl font-semibold mb-4 text-primary">{y}</h2>
             <ul className="space-y-3">
-              {byYear[y].map((t, i) => {
-                const content = (
-                  <>
-                    <div className="shrink-0 h-10 w-10 rounded-full bg-secondary flex items-center justify-center text-primary">
-                      <Mic className="h-5 w-5" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex flex-wrap items-center gap-2 text-xs uppercase tracking-wider">
-                        <span className="text-muted-foreground">{t.date}</span>
-                        <span className="rounded-full bg-secondary px-2 py-0.5 text-primary">{t.type}</span>
-                      </div>
-                      <div className="mt-1 font-semibold">{t.title}</div>
-                      <div className="text-sm text-muted-foreground mt-0.5">{t.venue}</div>
-                    </div>
-                  </>
-                );
-                return (
-                  <li key={i} className="glass-card p-5">
-                    {t.url ? (
-                      <a href={t.url} target="_blank" rel="noopener noreferrer" className="group flex items-start gap-4">
-                        {content}
-                      </a>
-                    ) : (
-                      <div className="flex items-start gap-4">{content}</div>
-                    )}
-                  </li>
-                );
-              })}
+              {byYear[y].map((t, i) => <TalkItem key={i} t={t} />)}
             </ul>
           </section>
         ))}
