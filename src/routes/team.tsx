@@ -126,9 +126,7 @@ function TeamPage() {
       <div className="container-page py-12 space-y-14">
         <section>
           <h2 className="text-xl font-semibold mb-5">Principal Investigator</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {pi.map((m) => <MemberCard key={m.name} m={m} />)}
-          </div>
+          {pi.map((m) => <MemberCard key={m.name} m={m} />)}
         </section>
         <section>
           <h2 className="text-xl font-semibold mb-5">PhD students</h2>
