@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHeader } from "@/components/page-shell";
 import { Download, FolderKanban } from "lucide-react";
 import cvPdf from "@/assets/CV_Joana_Cabral.pdf?url";
+import logoCCA from "@/assets/logoCCA.svg";
+import arqusLogo from "@/assets/arqus-color.png";
 
 export const Route = createFileRoute("/cv")({
   head: () => ({
@@ -42,6 +44,7 @@ const projects = [
     desc: "CSF-MIND: Cerebrospinal Fluid Monitoring of Dynamic Mental States. Principal Investigator, studying cerebrospinal fluid dynamics and how they relate to the organisation of brain networks.",
     link: "https://www.instagram.com/p/DYWoqgijUXO/?img_index=3",
     linkLabel: "View on Instagram",
+    logo: logoCCA,
   },
   {
     name: "BrainStimPredict",
@@ -49,6 +52,7 @@ const projects = [
     desc: "A cross-disciplinary approach to Brain Response Prediction. Lead institution: University of Padua. Partner institutions: University of Granada, University of Minho. Develops an innovative computational pipeline to predict how the brain responds to stimulation, bridging neuroscience, control theory and data science — training six early-career researchers through joint research, mobility, and validation of models using high-resolution neuroimaging data. Supports digital transformation and clinical translation in mental health with open-source tools for precision therapies.",
     link: "https://arqus-alliance.eu/news/arqus-research-initiative-results/",
     linkLabel: "Read more",
+    logo: arqusLogo,
   },
 ];
 
@@ -104,7 +108,13 @@ function CvPage() {
           <div className="space-y-3">
             {projects.map((p) => (
               <div key={p.name} className="glass-card p-5">
-                <FolderKanban className="h-5 w-5 text-primary" />
+                {p.logo ? (
+                  <div className="h-9 w-fit rounded-md bg-white px-2 py-1 flex items-center">
+                    <img src={p.logo} alt={`${p.name} funder logo`} className="h-full w-auto object-contain" />
+                  </div>
+                ) : (
+                  <FolderKanban className="h-5 w-5 text-primary" />
+                )}
                 <div className="mt-3 font-semibold">{p.name}</div>
                 <div className="text-xs uppercase tracking-wider text-primary mt-1">{p.funder}</div>
                 <p className="mt-2 text-sm text-muted-foreground">{p.desc}</p>

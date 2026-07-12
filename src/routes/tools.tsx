@@ -17,6 +17,7 @@ export const Route = createFileRoute("/tools")({
 const tools = [
   { name: "LEiDA Python", desc: "Leading Eigenvector Dynamics Analysis (LEiDA) toolbox for analyzing brain dynamics data, implemented in Python.", lang: "Python", url: "https://zenodo.org/records/14762794" },
   { name: "LEiDA MATLAB", desc: "Leading Eigenvector Dynamics Analysis (LEiDA) toolbox for analyzing brain dynamics data, implemented in MATLAB.", lang: "MATLAB", url: "https://zenodo.org/records/14762824" },
+  { name: "LEiDA Voxel", desc: "Leading Eigenvector Dynamics Analysis (LEiDA) applied directly in voxel space rather than predefined parcellations, clustering recurrent BOLD phase-coherence patterns into coupling modes.", lang: "MATLAB", url: "https://github.com/BrainWavesTecnico/LEiDA_Voxel" },
 ];
 
 function ToolsPage() {
