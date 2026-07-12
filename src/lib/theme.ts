@@ -7,9 +7,7 @@ export const THEME_STORAGE_KEY = "theme";
 export const themeBootstrapScript = `(function () {
   try {
     var stored = localStorage.getItem('${THEME_STORAGE_KEY}');
-    var theme = stored === 'light' || stored === 'dark'
-      ? stored
-      : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    var theme = stored === 'light' || stored === 'dark' ? stored : 'dark';
     if (theme === 'light') document.documentElement.classList.add('light');
   } catch (e) {}
 })();`;
