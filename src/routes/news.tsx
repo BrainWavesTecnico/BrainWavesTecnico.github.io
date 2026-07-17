@@ -3,6 +3,7 @@ import { PageShell, PageHeader } from "@/components/page-shell";
 import { Calendar } from "lucide-react";
 import posterLeonor from "@/assets/PosterLeonor.jpeg";
 import posterOhbm from "@/assets/PosterOHBM.jpeg";
+import brainWaterImg from "@/assets/BrainWaterMentalHealth.jpg";
 
 export const Route = createFileRoute("/news")({
   head: () => ({
@@ -50,6 +51,13 @@ const items: News[] = [
     tag: "Milestone",
     title: "Marta Xavier submitted her PhD thesis!",
     body: "Our PhD student Marta Xavier submitted her PhD thesis!",
+  },
+  {
+    date: "February 2026",
+    tag: "Outreach",
+    title: "\"The Brain's Water and Mental Health\" — Alto Minho Science Fest",
+    body: "Our image \"The Brain's Water and Mental Health\" featured in the science exhibition \"Brain, Health and Well-Being,\" organised by ICVS/School of Medicine of the University of Minho as part of the Alto Minho Science Fest. This mid-sagittal image was acquired on the 3 Tesla MRI scanner at Hospital de Braga by Celina Gomes (Braga Academic Clinical Centre, 2CA) and processed by Joana Cabral (ICVS researcher, 2017–2025). Aimed at the general public, it highlights in blue the spaces filled by cerebrospinal fluid, illustrating the growing recognition of this fluid's dynamics in brain health — from clearing metabolic waste during sleep to its links with neurological and psychiatric disorders.",
+    images: [brainWaterImg],
   },
   {
     date: "December 2025",
