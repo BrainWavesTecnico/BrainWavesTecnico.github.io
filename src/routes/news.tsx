@@ -17,7 +17,7 @@ export const Route = createFileRoute("/news")({
   component: NewsPage,
 });
 
-type News = { date: string; tag: string; title: string; body: string; url?: string; images?: string[] };
+type News = { date: string; tag: string; title: string; body: string; url?: string; images?: string[]; youtubeId?: string };
 
 const items: News[] = [
   {
@@ -56,7 +56,7 @@ const items: News[] = [
     date: "February 2026",
     tag: "Outreach",
     title: "\"The Brain's Water and Mental Health\" — Alto Minho Science Fest",
-    body: "Our image \"The Brain's Water and Mental Health\" featured in the science exhibition \"Brain, Health and Well-Being,\" organised by ICVS/School of Medicine of the University of Minho as part of the Alto Minho Science Fest. This mid-sagittal image was acquired on the 3 Tesla MRI scanner at Hospital de Braga by Celina Gomes (Braga Academic Clinical Centre, 2CA) and processed by Joana Cabral (ICVS researcher, 2017–2025). Aimed at the general public, it highlights in blue the spaces filled by cerebrospinal fluid, illustrating the growing recognition of this fluid's dynamics in brain health — from clearing metabolic waste during sleep to its links with neurological and psychiatric disorders.",
+    body: "Our image \"The Brain's Water and Mental Health\" featured in the science exhibition \"Brain, Health and Well-Being,\" organised by ICVS/School of Medicine of the University of Minho as part of the Alto Minho Science Fest. This mid-sagittal image was acquired on the 3 Tesla MRI scanner at Hospital de Braga by Celina Gomes (Radiologist at Braga Academic Clinical Centre, 2CA) and processed by Joana Cabral. Aimed at the general public, it highlights in blue the spaces filled by cerebrospinal fluid, illustrating the growing recognition of this fluid's dynamics in brain health — from clearing metabolic waste during sleep to its links with neurological and psychiatric disorders.",
     images: [brainWaterImg],
   },
   {
@@ -65,6 +65,7 @@ const items: News[] = [
     title: "\"O mistério das ondas cerebrais\" — Mentes Brilhantes, Observador",
     body: "Joana Cabral is featured in Observador's \"Mentes Brilhantes\" series, discussing how the brain's mysterious activity patterns are altered in neurological and psychiatric disease, and how her research aims to decode these signals.",
     url: "https://observador.pt/programas/mentes-brilhantes/o-misterio-das-ondas-cerebrais/",
+    youtubeId: "Ca2GfXBXWjU",
   },
 ];
 
@@ -90,6 +91,22 @@ function NewsPage() {
                     ))}
                   </div>
                 )}
+                {n.youtubeId && (
+                  <div className="mt-3 aspect-video max-w-lg overflow-hidden rounded-lg">
+                    <iframe
+                      className="h-full w-full"
+                      src={`https://www.youtube.com/embed/${n.youtubeId}`}
+                      title={n.title}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    />
+                  </div>
+                )}
+                {n.url && n.youtubeId && (
+                  <a href={n.url} target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-sm font-medium text-primary hover:underline">
+                    Read on Observador →
+                  </a>
+                )}
               </div>
             );
             return (
@@ -97,7 +114,7 @@ function NewsPage() {
                 <span className="absolute -left-2.5 h-5 w-5 rounded-full bg-primary/20 border-2 border-primary flex items-center justify-center">
                   <Calendar className="h-2.5 w-2.5 text-primary" />
                 </span>
-                {n.url ? (
+                {n.url && !n.youtubeId ? (
                   <a href={n.url} target="_blank" rel="noopener noreferrer" className="block hover:opacity-90 transition-opacity">
                     {card}
                   </a>
