@@ -4,6 +4,7 @@ import { Calendar } from "lucide-react";
 import posterLeonor from "@/assets/PosterLeonor.jpeg";
 import posterOhbm from "@/assets/PosterOHBM.jpeg";
 import brainWaterImg from "@/assets/BrainWaterMentalHealth.jpg";
+import braveModesImg from "@/assets/BraVeModes.png";
 
 export const Route = createFileRoute("/news")({
   head: () => ({
@@ -17,7 +18,7 @@ export const Route = createFileRoute("/news")({
   component: NewsPage,
 });
 
-type News = { date: string; tag: string; title: string; body: string; url?: string; images?: string[]; youtubeId?: string };
+type News = { date: string; tag: string; title: string; body: string; url?: string; images?: string[]; imagesFit?: "cover" | "contain"; youtubeId?: string };
 
 const items: News[] = [
   {
@@ -39,6 +40,8 @@ const items: News[] = [
     title: "Cognitive function linked to temporal occupancy of Brain-Ventricle (BraVe) modes",
     body: "We've revised our bioRxiv preprint! It's the fruit of a collaboration with a visiting PhD student from the University of Bari, linking how much time the brain spends in distinct Brain-Ventricle (BraVe) coupling modes to cognitive function across the Alzheimer's disease spectrum.",
     url: "https://www.biorxiv.org/content/10.1101/2025.01.04.631289v4",
+    images: [braveModesImg],
+    imagesFit: "contain",
   },
   {
     date: "May 2026",
@@ -86,9 +89,13 @@ function NewsPage() {
                 <p className="mt-2 text-sm text-muted-foreground">{n.body}</p>
                 {n.images && (
                   <div className="mt-3 flex flex-wrap gap-3">
-                    {n.images.map((src, j) => (
-                      <img key={j} src={src} alt={`${n.title} photo ${j + 1}`} className="h-32 w-auto rounded-lg object-cover" />
-                    ))}
+                    {n.images.map((src, j) =>
+                      n.imagesFit === "contain" ? (
+                        <img key={j} src={src} alt={`${n.title} figure ${j + 1}`} className="max-h-80 w-auto max-w-full rounded-lg bg-white object-contain p-2" />
+                      ) : (
+                        <img key={j} src={src} alt={`${n.title} photo ${j + 1}`} className="h-32 w-auto rounded-lg object-cover" />
+                      )
+                    )}
                   </div>
                 )}
                 {n.youtubeId && (
