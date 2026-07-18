@@ -631,7 +631,7 @@ const pubs: Pub[] = [
     "authors": "Cabral, Joana; Sun, Haeun",
     "title": "Beyond networks: Functional connectivity as eigenmode resonance",
     "venue": "Aperture Neuro 6(SI 3)",
-    "url": "https://scholar.google.com/scholar?q=Beyond%20networks%3A%20Functional%20connectivity%20as%20eigenmode%20resonance"
+    "url": "https://scholar.google.es/scholar?oi=bibs&hl=en&cluster=16919930485767786040"
   },
   {
     "year": 2026,
