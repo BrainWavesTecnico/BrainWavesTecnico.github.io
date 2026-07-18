@@ -529,11 +529,11 @@ const pubs: Pub[] = [
     "url": "https://scholar.google.com/scholar?q=Developing%20an%20fMRI%20neurofeedback%20intervention%20for%20emotion%20regulation%20under%20stress"
   },
   {
-    "year": 2025,
+    "year": 2026,
     "authors": "Campo, Fulvia Francesca; Miguel, Vânia; Brattico, Elvira; Magalhães, Vicente; Nigro, Salvatore; Tafuri, Benedetta; Logroscino, Giancarlo; Cabral, Joana; Alzheimer’s Disease Neuroimaging Initiative",
-    "title": "Cognitive reserve linked to network-specific brain-ventricle coupling modes",
-    "venue": "bioRxiv :2025.01.04.631289v4",
-    "url": "https://www.biorxiv.org/content/10.1101/2025.01.04.631289v4"
+    "title": "Cognitive function linked to temporal occupancy of Brain-Ventricle (BraVe) modes",
+    "venue": "bioRxiv :2025.01.04.631289",
+    "url": "https://doi.org/10.1101/2025.01.04.631289"
   },
   {
     "year": 2025,

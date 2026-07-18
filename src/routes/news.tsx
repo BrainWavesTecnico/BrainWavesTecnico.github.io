@@ -39,7 +39,7 @@ const items: News[] = [
     tag: "Preprint",
     title: "Cognitive function linked to temporal occupancy of Brain-Ventricle (BraVe) modes",
     body: "We've revised our bioRxiv preprint! It's the fruit of a collaboration with a visiting PhD student from the University of Bari, linking how much time the brain spends in distinct Brain-Ventricle (BraVe) coupling modes to cognitive function across the Alzheimer's disease spectrum.",
-    url: "https://www.biorxiv.org/content/10.1101/2025.01.04.631289v4",
+    url: "https://doi.org/10.1101/2025.01.04.631289",
     images: [braveModesImg],
     imagesFit: "contain",
   },
