@@ -653,6 +653,14 @@ function PublicationsPage() {
     <PageShell>
       <PageHeader eyebrow="Research output" title="Publications" description="Selected peer-reviewed publications. Click any entry to open the paper." />
       <div className="container-page py-12 space-y-12">
+        <a
+          href="https://scholar.google.es/citations?hl=en&user=v3ZEOeMAAAAJ&view_op=list_works&sortby=pubdate"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+        >
+          See updated publications in Google Scholar <ExternalLink className="h-4 w-4" />
+        </a>
         {years.map((y) => (
           <section key={y}>
             <h2 className="text-xl font-semibold mb-4 text-primary">{y}</h2>
