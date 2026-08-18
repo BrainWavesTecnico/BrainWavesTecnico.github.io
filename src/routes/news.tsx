@@ -6,6 +6,7 @@ import posterOhbm from "@/assets/PosterOHBM.jpeg";
 import brainWaterImg from "@/assets/BrainWaterMentalHealth.jpg";
 import braveModesImg from "@/assets/BraVeModes.png";
 import dbeDayImg from "@/assets/DBE_day.jpg";
+import gradients2026Img from "@/assets/Gradients2026.jpeg";
 
 export const Route = createFileRoute("/news")({
   head: () => ({
@@ -19,19 +20,20 @@ export const Route = createFileRoute("/news")({
   component: NewsPage,
 });
 
-type News = { date: string; tag: string; title: string; body: string; bullets?: string[]; url?: string; images?: string[]; imagesFit?: "cover" | "contain"; youtubeId?: string };
+type News = { date: string; tag: string; title: string; body: string; bullets?: string[]; note?: string; url?: string; images?: string[]; imagesFit?: "cover" | "contain"; youtubeId?: string };
 
 const items: News[] = [
   {
     date: "31 July 2026",
     tag: "Award",
-    title: "3 PhD grants awarded by FCT to the BrainWaves team",
-    body: "Congratulations to Afonso, Leonor and Beatriz, who each received a fully funded 4-year PhD scholarship from FCT to pursue their research projects:",
+    title: "3 PhD grants awarded by FCT to the BrainWaves team!",
+    body: "Congratulations to Afonso, Leonor and Beatriz, who each received a fully funded 4-year PhD scholarship from the Portuguese Foundation for Science and Technology (FCT) to pursue their research projects:",
     bullets: [
       "Brain Dynamical Complexity in Early Psychosis: Toward Biomarkers of Clinical Outcome (Afonso Fernandes)",
       "WOMBRAIN – Women's Brain Dynamics and Menstrual-Cycle Mood Vulnerability: From Neurobiology to Clinical Protocol Development (Leonor Abreu)",
       "Personalized Circuit-Based Transcranial Magnetic Stimulation in Obsessive-Compulsive Disorder: A Scalable Framework for Precision Neuromodulation (Beatriz Santos)",
     ],
+    note: "I deeply acknowledge the Portuguese Foundation for Science and Technology (FCT) for funding me throughout my career, starting with a Scientific Initiation Grant when I was 22 years old (2006–2007), my own PhD grant to go to Barcelona (2008–2012), an independent postdoc grant (2019–2022), and now counting 5 grants for my PhD students. This has been crucial for the development of the BrainWaves research team!",
   },
   {
     date: "July 2026",
@@ -51,7 +53,8 @@ const items: News[] = [
     date: "June 2026",
     tag: "Workshop",
     title: "Gradients in Brain Organization",
-    body: "Joana gave a talk and participated in a round table about structure-function relationships in the brain, at Château du Feÿ, France.",
+    body: "Joana attended the Gradients in Brain Organization workshop, where she gave a talk and participated in a round table about structure-function relationships in the brain, at Château du Feÿ, France.",
+    images: [gradients2026Img],
   },
   {
     date: "June 2026",
@@ -98,8 +101,9 @@ function NewsPage() {
       <div className="container-page py-12">
         <ol className="relative border-l border-border/60 ml-3 space-y-8">
           {items.map((n, i) => {
-            const card = (
-              <div className="glass-card p-5">
+            const hasImages = !!n.images && n.images.length > 0;
+            const text = (
+              <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-3 text-xs uppercase tracking-wider">
                   <span className="text-muted-foreground">{n.date}</span>
                   <span className="rounded-full bg-secondary px-2 py-0.5 text-primary">{n.tag}</span>
@@ -111,17 +115,7 @@ function NewsPage() {
                     {n.bullets.map((b, j) => <li key={j}>{b}</li>)}
                   </ul>
                 )}
-                {n.images && (
-                  <div className="mt-3 flex flex-wrap gap-3">
-                    {n.images.map((src, j) =>
-                      n.imagesFit === "contain" ? (
-                        <img key={j} src={src} alt={`${n.title} figure ${j + 1}`} className="max-h-80 w-auto max-w-full rounded-lg bg-white object-contain p-2" />
-                      ) : (
-                        <img key={j} src={src} alt={`${n.title} photo ${j + 1}`} className="h-32 w-auto rounded-lg object-cover" />
-                      )
-                    )}
-                  </div>
-                )}
+                {n.note && <p className="mt-3 text-sm italic text-muted-foreground">{n.note}</p>}
                 {n.youtubeId && (
                   <div className="mt-3 aspect-video max-w-lg overflow-hidden rounded-lg">
                     <iframe
@@ -138,6 +132,24 @@ function NewsPage() {
                     Read on Observador →
                   </a>
                 )}
+              </div>
+            );
+            const card = (
+              <div className="glass-card p-5">
+                <div className={hasImages ? "md:flex md:items-start md:gap-6" : undefined}>
+                  {text}
+                  {hasImages && (
+                    <div className="mt-3 flex flex-wrap gap-3 md:mt-0 md:shrink-0 md:flex-nowrap md:justify-end">
+                      {n.images!.map((src, j) =>
+                        n.imagesFit === "contain" ? (
+                          <img key={j} src={src} alt={`${n.title} figure ${j + 1}`} className="max-h-80 w-auto max-w-full rounded-lg bg-white object-contain p-2" />
+                        ) : (
+                          <img key={j} src={src} alt={`${n.title} photo ${j + 1}`} className="h-32 w-auto rounded-lg object-cover" />
+                        )
+                      )}
+                    </div>
+                  )}
+                </div>
               </div>
             );
             return (
