@@ -5,6 +5,7 @@ import posterLeonor from "@/assets/PosterLeonor.jpeg";
 import posterOhbm from "@/assets/PosterOHBM.jpeg";
 import brainWaterImg from "@/assets/BrainWaterMentalHealth.jpg";
 import braveModesImg from "@/assets/BraVeModes.png";
+import dbeDayImg from "@/assets/DBE_day.jpg";
 
 export const Route = createFileRoute("/news")({
   head: () => ({
@@ -18,9 +19,27 @@ export const Route = createFileRoute("/news")({
   component: NewsPage,
 });
 
-type News = { date: string; tag: string; title: string; body: string; url?: string; images?: string[]; imagesFit?: "cover" | "contain"; youtubeId?: string };
+type News = { date: string; tag: string; title: string; body: string; bullets?: string[]; url?: string; images?: string[]; imagesFit?: "cover" | "contain"; youtubeId?: string };
 
 const items: News[] = [
+  {
+    date: "31 July 2026",
+    tag: "Award",
+    title: "3 PhD grants awarded by FCT to the BrainWaves team",
+    body: "Congratulations to Afonso, Leonor and Beatriz, who each received a fully funded 4-year PhD scholarship from FCT to pursue their research projects:",
+    bullets: [
+      "Brain Dynamical Complexity in Early Psychosis: Toward Biomarkers of Clinical Outcome (Afonso Fernandes)",
+      "WOMBRAIN – Women's Brain Dynamics and Menstrual-Cycle Mood Vulnerability: From Neurobiology to Clinical Protocol Development (Leonor Abreu)",
+      "Personalized Circuit-Based Transcranial Magnetic Stimulation in Obsessive-Compulsive Disorder: A Scalable Framework for Precision Neuromodulation (Beatriz Santos)",
+    ],
+  },
+  {
+    date: "July 2026",
+    tag: "Outreach",
+    title: "DBE Day 2026 — Convento da Arrábida",
+    body: "Joana attended DBE Day 2026, the Department of Bioengineering's fourth retreat, held on 14 July at the Convento da Arrábida. The day brought faculty and staff together for team-building activities and discussions on the department's future and the use of AI in academia. Together with other new professors, Joana was part of the social committee organising team-building games about Evolution, Transcription Errors, and Recognition.",
+    images: [dbeDayImg],
+  },
   {
     date: "June 2026",
     tag: "Conference",
@@ -87,6 +106,11 @@ function NewsPage() {
                 </div>
                 <h3 className="mt-2 font-semibold">{n.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{n.body}</p>
+                {n.bullets && (
+                  <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-muted-foreground">
+                    {n.bullets.map((b, j) => <li key={j}>{b}</li>)}
+                  </ul>
+                )}
                 {n.images && (
                   <div className="mt-3 flex flex-wrap gap-3">
                     {n.images.map((src, j) =>
