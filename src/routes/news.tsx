@@ -139,12 +139,12 @@ function NewsPage() {
                 <div className={hasImages ? "md:flex md:items-start md:gap-6" : undefined}>
                   {text}
                   {hasImages && (
-                    <div className="mt-3 flex flex-wrap gap-3 md:mt-0 md:shrink-0 md:flex-nowrap md:justify-end">
+                    <div className="mt-3 flex flex-wrap gap-3 md:mt-0 md:shrink-0 md:justify-end">
                       {n.images!.map((src, j) =>
                         n.imagesFit === "contain" ? (
-                          <img key={j} src={src} alt={`${n.title} figure ${j + 1}`} className="max-h-80 w-auto max-w-full rounded-lg bg-white object-contain p-2" />
+                          <img key={j} src={src} alt={`${n.title} figure ${j + 1}`} className="w-96 max-w-full rounded-lg bg-white object-contain p-2" />
                         ) : (
-                          <img key={j} src={src} alt={`${n.title} photo ${j + 1}`} className="h-32 w-auto rounded-lg object-cover" />
+                          <img key={j} src={src} alt={`${n.title} photo ${j + 1}`} className="h-56 w-96 max-w-full rounded-lg object-cover" />
                         )
                       )}
                     </div>
