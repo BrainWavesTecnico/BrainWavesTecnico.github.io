@@ -15,7 +15,7 @@ export const Route = createFileRoute("/team")({
   head: () => ({
     meta: [
       { title: "Team — BrainWaves Group" },
-      { name: "description", content: "Principal investigator, PhD students, research assistants and visiting researchers of the BrainWaves Group." },
+      { name: "description", content: "Principal investigator, PhD students, Master students, research assistants and visiting researchers of the BrainWaves Group." },
       { property: "og:title", content: "Team — BrainWaves Group" },
       { property: "og:description", content: "Meet the BrainWaves Group team." },
     ],
@@ -65,6 +65,29 @@ const phdStudents: Member[] = [
     photo: inesPhoto,
     photoPosition: "object-top",
     bio: "Inês is a PhD student in Bioengineering at IST. She previously completed her BSc and MSc in Biomedical Engineering, with a specialisation in Neuroscience, at the University of Coimbra. Her current research focuses on rethinking fMRI preprocessing to preserve cerebrospinal fluid signals and explore their role in cognitive decline. Away from the computer, she's at the beach with family, camera ready, music playing, before retreating home to her cats.",
+  },
+];
+
+const masterStudents: Member[] = [
+  {
+    name: "Catarina Banha",
+    role: "Master Student",
+    bio: "Master's thesis: \"Brain Dynamics in Postoperative Delirium\", developed in collaboration with Dr. Albino Oliveira-Maia and Dr. Gonçalo Cotovio at the Champalimaud Foundation.",
+  },
+  {
+    name: "Marta Baptista",
+    role: "Master Student",
+    bio: "Master's thesis: \"Brain State Dynamics in Cocaine Dependence before and after Transcranial Magnetic Stimulation\", developed in collaboration with Dr. Diego Angeles Valdez at the Center for Neuropsychiatry, University Medical Center Groningen, Netherlands.",
+  },
+  {
+    name: "Maria Eduarda Silva",
+    role: "Master Student",
+    bio: "Master's thesis: \"Towards Standardization of Magnetic Resonance Elastography (MRE) Data and Processing\", developed in collaboration with Prof. Rodrigo Moreno at the KTH Royal Institute of Technology, Sweden.",
+  },
+  {
+    name: "Afonso Martins",
+    role: "Master Student",
+    bio: "Master's thesis: \"Brain State Dynamics during Propofol Anesthesia: Linking Network Phase-Locking to GABA-A Receptor Mechanisms Through a Dynamical Systems Framework\".",
   },
 ];
 
@@ -132,6 +155,12 @@ function TeamPage() {
           <h2 className="text-xl font-semibold mb-5">PhD students</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {phdStudents.map((m) => <MemberCard key={m.name} m={m} />)}
+          </div>
+        </section>
+        <section>
+          <h2 className="text-xl font-semibold mb-5">Master students</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {masterStudents.map((m) => <MemberCard key={m.name} m={m} />)}
           </div>
         </section>
         <section>
