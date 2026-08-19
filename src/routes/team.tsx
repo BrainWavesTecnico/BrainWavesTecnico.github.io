@@ -10,6 +10,7 @@ import giuliaPhoto from "@/assets/DSC038981-scaled.jpg";
 import andreaPhoto from "@/assets/AndreaVeronese.jpg";
 import joanaPhoto from "@/assets/Joana2025.jpeg";
 import inesPhoto from "@/assets/InesBh.jpeg";
+import beatrizPhoto from "@/assets/Beatriz_Santos_Phd.jpeg";
 
 export const Route = createFileRoute("/team")({
   head: () => ({
@@ -65,6 +66,12 @@ const phdStudents: Member[] = [
     photo: inesPhoto,
     photoPosition: "object-top",
     bio: "Inês is a PhD student in Bioengineering at IST. She previously completed her BSc and MSc in Biomedical Engineering, with a specialisation in Neuroscience, at the University of Coimbra. Her current research focuses on rethinking fMRI preprocessing to preserve cerebrospinal fluid signals and explore their role in cognitive decline. Away from the computer, she's at the beach with family, camera ready, music playing, before retreating home to her cats.",
+  },
+  {
+    name: "Beatriz Santos",
+    role: "PhD Student",
+    photo: beatrizPhoto,
+    bio: "With a background in Biomedical Engineering and Biophysics (BSc, MSc), Beatriz is a PhD student at IST and Champalimaud Foundation. Her research focus is on optimization of current brain stimulation targeting strategies in the treatment of neuropsychiatric disorders, combining neuroimaging, biophysical modelling and expertise as a TMS technician. Outside the lab she can be found reading, exploring or spending time with friends and family.",
   },
 ];
 
