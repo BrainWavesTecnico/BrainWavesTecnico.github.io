@@ -7,6 +7,7 @@ import brainWaterImg from "@/assets/BrainWaterMentalHealth.jpg";
 import braveModesImg from "@/assets/BraVeModes.png";
 import dbeDayImg from "@/assets/DBE_day.jpg";
 import gradients2026Img from "@/assets/Gradients2026.jpeg";
+import groupMriImg from "@/assets/GroupMRI.jpeg";
 
 export const Route = createFileRoute("/news")({
   head: () => ({
@@ -34,6 +35,14 @@ const items: News[] = [
       "Personalized Circuit-Based Transcranial Magnetic Stimulation in Obsessive-Compulsive Disorder: A Scalable Framework for Precision Neuromodulation (Beatriz Santos)",
     ],
     note: "I deeply acknowledge the Portuguese Foundation for Science and Technology (FCT) for funding me throughout my career, starting with a Scientific Initiation Grant when I was 22 years old (2006–2007), my own PhD grant to go to Barcelona (2008–2012), an independent postdoc grant (2019–2022), and now counting 5 grants for my PhD students. This has been crucial for the development of the BrainWaves research team!",
+  },
+  {
+    date: "July 2026",
+    tag: "Team",
+    title: "Seven BrainWaves brains, scanned!",
+    body: "In July, seven members of the BrainWaves team — including Joana! — had their brains scanned on a 3 Tesla MRI scanner, acquiring T1-weighted (MPRAGE) and T2-weighted (SPACE) images across sagittal, axial and coronal planes.",
+    images: [groupMriImg],
+    imagesFit: "contain",
   },
   {
     date: "July 2026",
