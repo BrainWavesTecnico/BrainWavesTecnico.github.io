@@ -11,6 +11,7 @@ import andreaPhoto from "@/assets/AndreaVeronese.jpg";
 import joanaPhoto from "@/assets/Joana2025.jpeg";
 import inesPhoto from "@/assets/InesBh.jpeg";
 import beatrizPhoto from "@/assets/Beatriz_Santos_Phd.jpeg";
+import martaBaptistaPhoto from "@/assets/foto_MartaBaptista.jpg";
 
 export const Route = createFileRoute("/team")({
   head: () => ({
@@ -84,6 +85,8 @@ const masterStudents: Member[] = [
   {
     name: "Marta Baptista",
     role: "Master Student",
+    photo: martaBaptistaPhoto,
+    photoPosition: "object-top",
     bio: "Master's thesis: \"Brain State Dynamics in Cocaine Dependence before and after Transcranial Magnetic Stimulation\", developed in collaboration with Dr. Diego Angeles Valdez at the Center for Neuropsychiatry, University Medical Center Groningen, Netherlands.",
   },
   {
