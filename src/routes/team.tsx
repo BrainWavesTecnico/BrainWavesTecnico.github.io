@@ -12,6 +12,7 @@ import joanaPhoto from "@/assets/Joana2025.jpeg";
 import inesPhoto from "@/assets/InesBh.jpeg";
 import beatrizPhoto from "@/assets/Beatriz_Santos_Phd.jpeg";
 import martaBaptistaPhoto from "@/assets/foto_MartaBaptista.jpg";
+import sterrePhoto from "@/assets/SterreMeijer.jpeg";
 
 export const Route = createFileRoute("/team")({
   head: () => ({
@@ -98,6 +99,13 @@ const masterStudents: Member[] = [
     name: "Afonso Martins",
     role: "Master Student",
     bio: "Master's thesis: \"Brain State Dynamics during Propofol Anesthesia: Linking Network Phase-Locking to GABA-A Receptor Mechanisms Through a Dynamical Systems Framework\".",
+  },
+  {
+    name: "Sterre Meijer",
+    role: "Master Student",
+    photo: sterrePhoto,
+    photoPosition: "object-top",
+    bio: "Master's internship: \"Longitudinal Brain State Dynamics in Alzheimer's Disease: Linking Functional Connectivity, Structural Atrophy and Cognitive Decline\", using longitudinal ADNI resting-state fMRI and LEiDA as part of her MSc at Eindhoven University of Technology (TU/e).",
   },
 ];
 
