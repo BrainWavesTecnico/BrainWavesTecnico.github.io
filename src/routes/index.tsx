@@ -35,6 +35,13 @@ function Index() {
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">one wave at a time.</span>
             </h1>
             <p className="mt-6 max-w-xl text-base text-muted-foreground">
+              The BrainWaves research group investigates brain dynamics, with a focus on emergent properties such as
+              collective oscillations, long-range correlations, resonance, and non-stationary behaviour. We combine
+              neuroimaging analysis and signal processing with dynamical systems theory, computational modelling, and
+              physical experiments to uncover the mechanisms behind the observed dynamics and their links to cognition
+              and mental health.
+            </p>
+            <p className="mt-4 max-w-xl text-base text-muted-foreground">
               The BrainWaves research group, led by Joana Cabral, is part of the{" "}
               <InlineLink href="https://www.laseeb.org/">Evolutionary Systems and Biomedical Engineering Lab (LaSEEB)</InlineLink>,
               at the <InlineLink href="https://tecnico.ulisboa.pt/en/about-tecnico/">Instituto Superior Técnico (IST)</InlineLink>,
@@ -45,13 +52,6 @@ function Index() {
               a research unit from the{" "}
               <InlineLink href="https://groups.tecnico.ulisboa.pt/~larsys.daemon/">Laboratory for Robotics and Engineering Systems (LARSyS)</InlineLink>{" "}
               in the LIFE Thematic Line.
-            </p>
-            <p className="mt-4 max-w-xl text-base text-muted-foreground">
-              The BrainWaves research group investigates brain dynamics, with a focus on emergent properties such as
-              collective oscillations, long-range correlations, resonance, and non-stationary behaviour. We combine
-              neuroimaging analysis and signal processing with dynamical systems theory, computational modelling, and
-              physical experiments to uncover the mechanisms behind the observed dynamics and their links to cognition
-              and mental health.
             </p>
           </div>
           <div className="relative flex justify-center">
