@@ -104,7 +104,6 @@ const masterStudents: Member[] = [
     name: "Sterre Meijer",
     role: "Master Student",
     photo: sterrePhoto,
-    photoPosition: "object-top",
     bio: "Master's internship: \"Longitudinal Brain State Dynamics in Alzheimer's Disease: Linking Functional Connectivity, Structural Atrophy and Cognitive Decline\", using longitudinal ADNI resting-state fMRI and LEiDA as part of her MSc at Eindhoven University of Technology (TU/e).",
   },
 ];
