@@ -106,6 +106,11 @@ const masterStudents: Member[] = [
     photo: sterrePhoto,
     bio: "Master's internship: \"Longitudinal Brain State Dynamics in Alzheimer's Disease: Linking Functional Connectivity, Structural Atrophy and Cognitive Decline\", using longitudinal ADNI resting-state fMRI and LEiDA as part of her MSc at Eindhoven University of Technology (TU/e).",
   },
+  {
+    name: "Francisco Ameixial",
+    role: "Master Student",
+    bio: "Master's thesis: \"Conscious Detection of Prediction Errors Across Rhythmic Contexts\", developed in collaboration with Prof. Mattia Rosso at the Centre for Music in the Brain, Aarhus University, Denmark.",
+  },
 ];
 
 const researchAssistants: Member[] = [
