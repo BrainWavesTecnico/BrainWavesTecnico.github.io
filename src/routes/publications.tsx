@@ -557,11 +557,11 @@ const pubs: Pub[] = [
     "url": "https://scholar.google.com/scholar?q=Physical%20exercise%20and%20brain%20network%20dynamics%3A%20reduction%20of%20frontoparietal-striatal%20connectivity%20following%201%20hour%20of%20aerobic%20cycling"
   },
   {
-    "year": 2025,
+    "year": 2026,
     "authors": "Esteves, Inês; Perdigão, Alexandre; Fouto, Ana R; Ruiz-Tagle, Amparo; Caetano, Gina; Cabral, Joana; Martins, Isabel Pavão; Gil-Gouveia, Raquel; Caballero-Gaudes, César; Figueiredo, Patrícia",
-    "title": "Disrupted salience network dynamics during the imagery of migraine attacks",
-    "venue": "bioRxiv :2025.05. 10.653239",
-    "url": "https://scholar.google.com/scholar?q=Disrupted%20salience%20network%20dynamics%20during%20the%20imagery%20of%20migraine%20attacks"
+    "title": "Salience Network Dynamics Across Spontaneous Attacks, Interictal Rest and Interictal Pain Imagery in Menstrually Related Migraine",
+    "venue": "Brain Topography 39(6):94",
+    "url": "https://doi.org/10.1007/s10548-026-01247-x"
   },
   {
     "year": 2025,
