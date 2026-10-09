@@ -66,7 +66,6 @@ const phdStudents: Member[] = [
     name: "Inês Bem-Haja",
     role: "PhD Student",
     photo: inesPhoto,
-    photoPosition: "object-top",
     bio: "Inês is a PhD student in Bioengineering at IST. She previously completed her BSc and MSc in Biomedical Engineering, with a specialisation in Neuroscience, at the University of Coimbra. Her current research focuses on rethinking fMRI preprocessing to preserve cerebrospinal fluid signals and explore their role in cognitive decline. Away from the computer, she's at the beach with family, camera ready, music playing, before retreating home to her cats.",
   },
   {
@@ -96,7 +95,7 @@ const masterStudents: Member[] = [
     bio: "Master's thesis: \"Towards Standardization of Magnetic Resonance Elastography (MRE) Data and Processing\", developed in collaboration with Prof. Rodrigo Moreno at the KTH Royal Institute of Technology, Sweden.",
   },
   {
-    name: "Afonso Martins",
+    name: "Afonso Couteiro Martins",
     role: "Master Student",
     bio: "Master's thesis: \"Brain State Dynamics during Propofol Anesthesia: Linking Network Phase-Locking to GABA-A Receptor Mechanisms Through a Dynamical Systems Framework\".",
   },
