@@ -19,7 +19,7 @@ type Talk = { year: number; date: string; title: string; venue: string; type: st
 const upcoming: Talk[] = [
   { year: 2026, date: "3–4 November 2026", title: "7th Students Meeting of the Mind-Brain College, Universidade de Lisboa", venue: "Reitoria da Universidade de Lisboa · Lisbon, Portugal", type: "Plenary lecture" },
   { year: 2026, date: "17–20 November 2026", title: "Workshop on Whole-Brain Models and High-Order Interactions for Brain Health", venue: "Universitat de les Illes Balears · Palma de Mallorca, Spain", type: "Invited talk", url: "https://rubenherzog.github.io/workshop-wbm-hoi-2026/" },
-  { year: 2027, date: "3–5 February 2027", title: "Brain dynamics as a window into stress vulnerability and resilience in humans", venue: "Global Stress & Resilience Meeting 2027 · Lausanne, Switzerland", type: "Invited talk" },
+  { year: 2027, date: "3–5 February 2027", title: "Brain dynamics as a window into stress vulnerability and resilience in humans", venue: "Global Stress & Resilience Meeting 2027 · Lausanne, Switzerland", type: "Contributed talk" },
 ];
 
 const talks: Talk[] = [
