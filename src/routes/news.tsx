@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell, PageHeader } from "@/components/page-shell";
 import { Calendar } from "lucide-react";
 import posterLeonor from "@/assets/PosterLeonor.jpeg";
@@ -8,6 +8,11 @@ import braveModesImg from "@/assets/BraVeModes.png";
 import dbeDayImg from "@/assets/DBE_day.jpg";
 import gradients2026Img from "@/assets/Gradients2026.jpeg";
 import groupMriImg from "@/assets/GroupMRI.jpeg";
+import anniversaryWorkshopImg from "@/assets/Anniversary_Workshop.png";
+import anniversaryDrawingImg from "@/assets/Anniversary_Drawing1.jpeg";
+import anniversaryGroupImg from "@/assets/Anniversary_Group.jpeg";
+import anniversaryCakeImg from "@/assets/Anniversary_Cake.jpeg";
+import anniversaryCandleImg from "@/assets/Anniversary_Candle.jpeg";
 
 export const Route = createFileRoute("/news")({
   head: () => ({
@@ -21,9 +26,20 @@ export const Route = createFileRoute("/news")({
   component: NewsPage,
 });
 
-type News = { date: string; tag: string; title: string; body: string; bullets?: string[]; note?: string; url?: string; images?: string[]; imagesFit?: "cover" | "contain"; youtubeId?: string };
+type News = { date: string; tag: string; title: string; body: string; bullets?: string[]; note?: string; url?: string; images?: string[]; imagesFit?: "cover" | "contain"; youtubeId?: string; links?: { to?: string; href?: string; label: string }[] };
 
 const items: News[] = [
+  {
+    date: "14 October 2026",
+    tag: "Milestone",
+    title: "BrainWaves Lab's 1st Anniversary!",
+    body: "I started the BrainWaves Lab on 1 October 2025. One year later, I'm surrounded by a team of amazing human beings who share my passion about understanding the mechanisms of oscillatory phenomena in the brain. We celebrated with a creative drawing workshop guided by my artist friend Joana Rebelo de Andrade at her new Arts School, and a cake carrying the lab's logo.",
+    images: [anniversaryWorkshopImg, anniversaryDrawingImg, anniversaryGroupImg, anniversaryCakeImg, anniversaryCandleImg],
+    links: [
+      { href: "https://eadesenho.pt/", label: "Visit EA Desenho, Joana Rebelo de Andrade's Arts School" },
+      { to: "/team", label: "Meet the whole team here" },
+    ],
+  },
   {
     date: "31 July 2026",
     tag: "Award",
@@ -141,13 +157,29 @@ function NewsPage() {
                     Read on Observador →
                   </a>
                 )}
+                {n.links && (
+                  <div className="mt-3 flex flex-col gap-1">
+                    {n.links.map((l, j) =>
+                      l.to ? (
+                        <Link key={j} to={l.to} className="inline-block text-sm font-medium text-primary hover:underline">
+                          {l.label} →
+                        </Link>
+                      ) : (
+                        <a key={j} href={l.href} target="_blank" rel="noopener noreferrer" className="inline-block text-sm font-medium text-primary hover:underline">
+                          {l.label} →
+                        </a>
+                      )
+                    )}
+                  </div>
+                )}
               </div>
             );
+            const manyImages = hasImages && n.images!.length > 2;
             const card = (
               <div className="glass-card p-5">
-                <div className={hasImages ? "md:flex md:items-start md:gap-6" : undefined}>
+                <div className={hasImages && !manyImages ? "md:flex md:items-start md:gap-6" : undefined}>
                   {text}
-                  {hasImages && (
+                  {hasImages && !manyImages && (
                     <div className="mt-3 flex flex-wrap gap-3 md:mt-0 md:shrink-0 md:justify-end">
                       {n.images!.map((src, j) =>
                         n.imagesFit === "contain" ? (
@@ -159,6 +191,13 @@ function NewsPage() {
                     </div>
                   )}
                 </div>
+                {manyImages && (
+                  <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    {n.images!.map((src, j) => (
+                      <img key={j} src={src} alt={`${n.title} photo ${j + 1}`} className="aspect-square w-full rounded-lg object-cover" />
+                    ))}
+                  </div>
+                )}
               </div>
             );
             return (
