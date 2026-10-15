@@ -34,7 +34,7 @@ const items: News[] = [
     tag: "Milestone",
     title: "BrainWaves Lab's 1st Anniversary!",
     body: "I started the BrainWaves Lab on 1 October 2025. One year later, I'm surrounded by a team of amazing human beings who share my passion about understanding the mechanisms of oscillatory phenomena in the brain. We celebrated with a creative drawing workshop guided by my artist friend Joana Rebelo de Andrade at her new Arts School, and a cake carrying the lab's logo.",
-    images: [anniversaryWorkshopImg, anniversaryDrawingImg, anniversaryGroupImg, anniversaryCakeImg, anniversaryCandleImg],
+    images: [anniversaryWorkshopImg, anniversaryDrawingImg, anniversaryCakeImg, anniversaryCandleImg, anniversaryGroupImg],
     links: [
       { href: "https://eadesenho.pt/", label: "Visit EA Desenho, Joana Rebelo de Andrade's Arts School" },
       { to: "/team", label: "Meet the whole team here" },
