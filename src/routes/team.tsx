@@ -13,6 +13,7 @@ import inesPhoto from "@/assets/InesBh.jpeg";
 import beatrizPhoto from "@/assets/Beatriz_Santos_Phd.jpeg";
 import martaBaptistaPhoto from "@/assets/foto_MartaBaptista.jpg";
 import sterrePhoto from "@/assets/SterreMeijer.jpeg";
+import groupBanner from "@/assets/BrainWavesLabOct26_banner.jpg";
 
 export const Route = createFileRoute("/team")({
   head: () => ({
@@ -167,6 +168,13 @@ function MemberCard({ m, showAvatar = true }: { m: Member; showAvatar?: boolean 
 function TeamPage() {
   return (
     <PageShell>
+      <div className="container-page pt-12">
+        <img
+          src={groupBanner}
+          alt="The BrainWaves Group team"
+          className="w-full rounded-2xl object-cover max-h-80"
+        />
+      </div>
       <div className="container-page py-12 space-y-14">
         <section>
           <h2 className="text-xl font-semibold mb-5">Principal Investigator</h2>
