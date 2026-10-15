@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell } from "@/components/page-shell";
 import { User } from "lucide-react";
+import type { ReactNode } from "react";
 import leonorPhoto from "@/assets/LeonorAbreu.jpg";
 import martaPhoto from "@/assets/MartaXavier.jpg";
 import afonsoPhoto from "@/assets/AfonsoFernandes.jpeg";
@@ -27,12 +28,19 @@ export const Route = createFileRoute("/team")({
   component: TeamPage,
 });
 
-type Member = { name: string; role: string; bio: string; icon?: typeof User; photo?: string; photoPosition?: string };
+type Member = { name: string; role: ReactNode; bio: string; icon?: typeof User; photo?: string; photoPosition?: string };
 
 const pi: Member[] = [
   {
     name: "Joana Cabral",
-    role: "Principal Investigator",
+    role: (
+      <>
+        Principal Investigator and Assistant Professor at the{" "}
+        <a href="https://dbe.tecnico.ulisboa.pt/" target="_blank" rel="noopener noreferrer" className="hover:underline">
+          Bioengineering Department
+        </a>
+      </>
+    ),
     photo: joanaPhoto,
     bio: "Joana's research has provided insight into brain function, uncovering synchronization mechanisms underlying functional connectivity, oscillations as collective emergent properties, and the functional relevance of non stationary brain dynamics. Her work also explores the links between spontaneous brain activity, mental health and cognitive function. Mother of three, she is endlessly curious, intrigued and fascinated by the mechanisms of life, mind and consciousness, both in her research and in life.",
   },
