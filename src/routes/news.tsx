@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell, PageHeader } from "@/components/page-shell";
 import { Calendar } from "lucide-react";
+import type { ReactNode } from "react";
 import posterLeonor from "@/assets/PosterLeonor.jpeg";
 import posterOhbm from "@/assets/PosterOHBM.jpeg";
 import brainWaterImg from "@/assets/BrainWaterMentalHealth.jpg";
@@ -26,19 +27,26 @@ export const Route = createFileRoute("/news")({
   component: NewsPage,
 });
 
-type News = { date: string; tag: string; title: string; body: string; bullets?: string[]; note?: string; url?: string; images?: string[]; imagesFit?: "cover" | "contain"; youtubeId?: string; links?: { to?: string; href?: string; label: string }[] };
+type News = { date: string; tag: string; title: string; body: ReactNode; bullets?: string[]; note?: string; url?: string; images?: string[]; imagesFit?: "cover" | "contain"; youtubeId?: string };
 
 const items: News[] = [
   {
     date: "14 October 2026",
     tag: "Milestone",
     title: "BrainWaves Lab's 1st Anniversary!",
-    body: "I started the BrainWaves Lab on 1 October 2025. One year later, I'm surrounded by a team of amazing human beings who share my passion about understanding the mechanisms of oscillatory phenomena in the brain. We celebrated with a creative drawing workshop guided by my artist friend Joana Rebelo de Andrade at her new Arts School, and a cake carrying the lab's logo.",
+    body: (
+      <>
+        I started the BrainWaves Lab on 1 October 2025. One year later, I'm surrounded by a{" "}
+        <Link to="/team" className="text-primary hover:underline">team</Link> of amazing human beings who share my
+        passion about understanding the mechanisms of oscillatory phenomena in the brain. We celebrated with a
+        creative drawing workshop guided by my artist friend{" "}
+        <a href="https://eadesenho.pt/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+          Joana Rebelo de Andrade
+        </a>{" "}
+        at her new Arts School, and a cake carrying the lab's logo.
+      </>
+    ),
     images: [anniversaryWorkshopImg, anniversaryDrawingImg, anniversaryCakeImg, anniversaryCandleImg, anniversaryGroupImg],
-    links: [
-      { href: "https://eadesenho.pt/", label: "Visit EA Desenho, Joana Rebelo de Andrade's Arts School" },
-      { to: "/team", label: "Meet the whole team here" },
-    ],
   },
   {
     date: "31 July 2026",
@@ -64,7 +72,18 @@ const items: News[] = [
     date: "July 2026",
     tag: "Outreach",
     title: "DBE Day 2026 — Convento da Arrábida",
-    body: "Joana attended DBE Day 2026, the Department of Bioengineering's fourth retreat, held on 14 July at the Convento da Arrábida. The day brought faculty and staff together for team-building activities and discussions on the department's future and the use of AI in academia. Together with other new professors, Joana was part of the social committee organising team-building games about Evolution, Transcription Errors, and Recognition.",
+    body: (
+      <>
+        Joana attended DBE Day 2026, the{" "}
+        <a href="https://dbe.tecnico.ulisboa.pt/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+          Department of Bioengineering
+        </a>
+        's fourth retreat, held on 14 July at the Convento da Arrábida. The day brought faculty and staff together
+        for team-building activities and discussions on the department's future and the use of AI in academia.
+        Together with other new professors, Joana was part of the social committee organising team-building games
+        about Evolution, Transcription Errors, and Recognition.
+      </>
+    ),
     images: [dbeDayImg],
   },
   {
@@ -156,21 +175,6 @@ function NewsPage() {
                   <a href={n.url} target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-sm font-medium text-primary hover:underline">
                     Read on Observador →
                   </a>
-                )}
-                {n.links && (
-                  <div className="mt-3 flex flex-col gap-1">
-                    {n.links.map((l, j) =>
-                      l.to ? (
-                        <Link key={j} to={l.to} className="inline-block text-sm font-medium text-primary hover:underline">
-                          {l.label} →
-                        </Link>
-                      ) : (
-                        <a key={j} href={l.href} target="_blank" rel="noopener noreferrer" className="inline-block text-sm font-medium text-primary hover:underline">
-                          {l.label} →
-                        </a>
-                      )
-                    )}
-                  </div>
                 )}
               </div>
             );
