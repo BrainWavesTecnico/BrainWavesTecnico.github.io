@@ -194,7 +194,12 @@ function NewsPage() {
                 {manyImages && (
                   <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-3">
                     {n.images!.map((src, j) => (
-                      <img key={j} src={src} alt={`${n.title} photo ${j + 1}`} className="aspect-square w-full rounded-lg object-cover" />
+                      <img
+                        key={j}
+                        src={src}
+                        alt={`${n.title} photo ${j + 1}`}
+                        className={`w-full rounded-lg object-cover ${j === 0 ? "col-span-2 aspect-[2/1]" : "aspect-square"}`}
+                      />
                     ))}
                   </div>
                 )}
