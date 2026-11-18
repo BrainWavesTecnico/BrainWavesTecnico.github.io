@@ -17,14 +17,14 @@ export const Route = createFileRoute("/talks")({
 type Talk = { year: number; date: string; title: string; venue: string; type: string; url?: string };
 
 const upcoming: Talk[] = [
-  { year: 2026, date: "16 October 2026", title: "The architecture of things: careers, brains and buildings", venue: "Research Seminar in Architecture, Faculty of Architecture, University of Lisbon · Lisbon, Portugal", type: "Cross-disciplinary invited talk" },
-  { year: 2026, date: "3–4 November 2026", title: "7th Students Meeting of the Mind-Brain College, Universidade de Lisboa", venue: "Reitoria da Universidade de Lisboa · Lisbon, Portugal", type: "Plenary lecture" },
   { year: 2026, date: "17–20 November 2026", title: "Workshop on Whole-Brain Models and High-Order Interactions for Brain Health", venue: "Universitat de les Illes Balears · Palma de Mallorca, Spain", type: "Invited talk", url: "https://rubenherzog.github.io/workshop-wbm-hoi-2026/" },
   { year: 2027, date: "3–5 February 2027", title: "Brain dynamics as a window into stress vulnerability and resilience in humans", venue: "Global Stress & Resilience Meeting 2027 · Lausanne, Switzerland", type: "Contributed talk" },
 ];
 
 const talks: Talk[] = [
   // 2026
+  { year: 2026, date: "3–4 November 2026", title: "7th Students Meeting of the Mind-Brain College, Universidade de Lisboa", venue: "Reitoria da Universidade de Lisboa · Lisbon, Portugal", type: "Plenary lecture" },
+  { year: 2026, date: "16 October 2026", title: "The architecture of things: careers, brains and buildings", venue: "Research Seminar in Architecture, Faculty of Architecture, University of Lisbon · Lisbon, Portugal", type: "Cross-disciplinary invited talk" },
   { year: 2026, date: "14 July 2026", title: "Constraining large-scale models of brain dynamics with local biological properties: Methods and applications", venue: "Organisation for Computational Neuroscience (OCNS) Meeting · Halifax, Canada (remote presentation)", type: "Workshop", url: "https://www.cnsorg.org/cns-2026-quick" },
   { year: 2026, date: "12 June 2026", title: "Functional modes of cognition resonate beyond neurons alone", venue: "Colloquium 'Mechanisms of Whole-Brain Communication', Paris Brain Institute (PBI) · Paris, France", type: "Invited talk" },
   { year: 2026, date: "11 June 2026", title: "Resonant waves shaping functional Gradients", venue: "Gradients in Brain Organization Workshop · Château du Feÿ, France", type: "Invited talk" },
