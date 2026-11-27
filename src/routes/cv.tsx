@@ -5,6 +5,9 @@ import cvPdf from "@/assets/CV_Joana_Cabral.pdf?url";
 import logoCCA from "@/assets/logoCCA.svg";
 import arqusLogo from "@/assets/arqus-color.png";
 import fctTenureLogo from "@/assets/FctTenureLogo.png";
+import idicaLogo from "@/assets/IdicaLogo.png";
+import santanderLogo from "@/assets/SantanderLogo.png";
+import tecnicoLogo from "@/assets/LogoTecnico.png";
 
 export const Route = createFileRoute("/cv")({
   head: () => ({
@@ -49,15 +52,17 @@ const projects = [
   },
   {
     name: "Shaping the Future",
-    funder: "Instituto Superior Técnico & Santander",
+    funder: "Instituto Superior Técnico & Banco Santander",
     desc: "A programme for Assistant Professors and Researchers in their probationary period, promoting full integration into Técnico's academic life and conveying the institution's ethical values and good practices. It combines mentoring and monitoring, access to start-up funds including funding for equipment and for a sabbatical period abroad, training activities, and classroom support.",
     link: "https://shapingthefuture.tecnico.ulisboa.pt/en/",
     linkLabel: "Read more",
+    logos: [tecnicoLogo, santanderLogo],
   },
   {
     name: "3DS-Relax",
     funder: "IDI&CA, Universidade Politécnica de Lisboa · 2026–2027",
     desc: "Psychophysiological Monitoring of Emotional States via 3D Audio and Vibration with AI-based Assessment. The project uses the SonikB3D multisensory platform, combining immersive 3D audio and vibration to promote and evaluate relaxation. Through EEG, ECG and EDA monitoring, alongside AI, it identifies the user's emotional state in real time, contributing to stress regulation, mental health and well-being. A collaboration between Instituto Superior de Engenharia de Lisboa (ISEL), Universidade Lusófona (HEI-Lab) and IST-LaSEEB/ISR.",
+    logo: idicaLogo,
   },
   {
     name: "CSF-MIND",
@@ -129,7 +134,15 @@ function CvPage() {
           <div className="space-y-3">
             {projects.map((p) => (
               <div key={p.name} className="glass-card p-5">
-                {p.logo ? (
+                {p.logos ? (
+                  <div className="flex items-center gap-2">
+                    {p.logos.map((logo, i) => (
+                      <div key={i} className="h-9 w-fit rounded-md bg-white px-2 py-1 flex items-center">
+                        <img src={logo} alt={`${p.name} funder logo`} className="h-full w-auto object-contain" />
+                      </div>
+                    ))}
+                  </div>
+                ) : p.logo ? (
                   <div className="h-9 w-fit rounded-md bg-white px-2 py-1 flex items-center">
                     <img src={p.logo} alt={`${p.name} funder logo`} className="h-full w-auto object-contain" />
                   </div>
