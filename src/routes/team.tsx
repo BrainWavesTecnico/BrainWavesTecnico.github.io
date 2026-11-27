@@ -13,6 +13,8 @@ import beatrizPhoto from "@/assets/Beatriz_Santos_Phd.jpeg";
 import martaBaptistaPhoto from "@/assets/foto_MartaBaptista.jpg";
 import sterrePhoto from "@/assets/SterreMeijer.jpeg";
 import nicolaPhoto from "@/assets/PortraitNicolaCinardi.jpeg";
+import giuliaPhoto from "@/assets/DSC038981-scaled.jpg";
+import andreaPhoto from "@/assets/AndreaVeronese.jpg";
 import groupBanner from "@/assets/BrainWavesLabOct26_banner.jpg";
 
 export const Route = createFileRoute("/team")({
@@ -137,22 +139,24 @@ const masterStudents: Member[] = [
 ];
 
 const former: Member[] = [
-  { name: "Borjan Milinkovic", role: "Visiting Postdoc", bio: "Paris Brain Institute." },
-  { name: "Angeliki Plevri", role: "Research Assistant", bio: "Maastricht University." },
-  { name: "Giulia Pagnin", role: "Visiting PhD Student", bio: "University of Padova." },
-  { name: "Andrea Veronese", role: "Visiting PhD Student", bio: "Camerino/Padua." },
+  { name: "Borjan Milinkovic", role: "Visiting Postdoc", bio: "Paris Brain Institute, France." },
+  { name: "Angeliki Plevri", role: "Research Assistant", bio: "Maastricht University, Netherlands." },
+  { name: "Giulia Pagnin", role: "Visiting PhD Student", photo: giuliaPhoto, bio: "University of Padova, Italy." },
+  { name: "Andrea Veronese", role: "Visiting PhD Student", photo: andreaPhoto, bio: "Camerino/Padua, Italy." },
 ];
 
-function MemberCard({ m, showAvatar = true }: { m: Member; showAvatar?: boolean }) {
+function MemberCard({ m, showAvatar = true, size = "normal" }: { m: Member; showAvatar?: boolean; size?: "normal" | "sm" }) {
   const Icon = m.icon ?? User;
+  const avatarSize = size === "sm" ? "h-12 w-12" : "h-24 w-24";
+  const iconSize = size === "sm" ? "h-6 w-6" : "h-12 w-12";
   return (
     <div className="glass-card p-5 flex gap-4">
       {showAvatar && (
-        <div className="shrink-0 h-24 w-24 rounded-full bg-secondary flex items-center justify-center text-primary overflow-hidden">
+        <div className={`shrink-0 ${avatarSize} rounded-full bg-secondary flex items-center justify-center text-primary overflow-hidden`}>
           {m.photo ? (
             <img src={m.photo} alt={`Photo of ${m.name}`} className={`h-full w-full object-cover ${m.photoPosition ?? ""}`} />
           ) : (
-            <Icon className="h-12 w-12" />
+            <Icon className={iconSize} />
           )}
         </div>
       )}
@@ -199,7 +203,7 @@ function TeamPage() {
         <section>
           <h2 className="text-xl font-semibold mb-5">Former group members</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {former.map((m) => <MemberCard key={m.name} m={m} showAvatar={false} />)}
+            {former.map((m) => <MemberCard key={m.name} m={m} showAvatar={!!m.photo} size="sm" />)}
           </div>
         </section>
       </div>
