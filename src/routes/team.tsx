@@ -182,9 +182,7 @@ function TeamPage() {
         </section>
         <section>
           <h2 className="text-xl font-semibold mb-5">Postdoctoral researchers</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {postdocs.map((m) => <MemberCard key={m.name} m={m} />)}
-          </div>
+          {postdocs.map((m) => <MemberCard key={m.name} m={m} />)}
         </section>
         <section>
           <h2 className="text-xl font-semibold mb-5">PhD students</h2>
