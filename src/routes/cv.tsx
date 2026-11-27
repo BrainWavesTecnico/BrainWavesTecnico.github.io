@@ -30,7 +30,7 @@ const positions = [
   { role: "Assistant Professor (FCT Tenure+)", place: "Dept. of Bioengineering, Instituto Superior Técnico, Universidade de Lisboa", years: "2025–present" },
   { role: "Principal Investigator", place: "LaSEEB, ISR-Lisboa/LARSyS, Lisbon, Portugal", years: "2025–present" },
   { role: "La Caixa Junior Leader Fellow (BRAINSTIM)", place: "Life and Health Sciences Research Institute (ICVS), Universidade do Minho, Braga", years: "2022–2025" },
-  { role: "Assistant Researcher", place: "Life and Health Sciences Research Institute (ICVS), Universidade do Minho, Braga", years: "2017–2022" },
+  { role: "Independent Assistant Researcher", place: "Life and Health Sciences Research Institute (ICVS), Universidade do Minho, Braga", years: "2017–2022" },
   { role: "Postdoctoral Researcher (ERC Consolidator project)", place: "University of Oxford, UK", years: "2014–2017" },
   { role: "Postdoctoral Researcher (ERC Advanced project)", place: "Universitat Pompeu Fabra, Barcelona, Spain", years: "2012–2014" },
   { role: "PhD Researcher, Computational Neuroscience Group", place: "Universitat Pompeu Fabra, Barcelona, Spain", years: "2008–2012" },
