@@ -41,11 +41,18 @@ const visitingPositions = [
 const projects = [
   {
     name: "FCT-Tenure",
-    funder: "Fundação para a Ciência e a Tecnologia (FCT) · 2025–present",
+    funder: "Fundação para a Ciência e a Tecnologia (FCT) · 2025–2030",
     desc: "A new FCT funding instrument to stabilise doctoral researchers in permanent career positions, designed to promote the hiring of PhD-holding researchers exclusively for permanent posts. Includes start-up funds.",
     link: "https://www.fct.pt/1-a-edicao-do-fct-tenure-com-1000-vagas-exclusivamente-para-posicoes-permanentes/",
     linkLabel: "Read more",
     logo: fctTenureLogo,
+  },
+  {
+    name: "Shaping the Future",
+    funder: "Instituto Superior Técnico & Santander",
+    desc: "A programme for Assistant Professors and Researchers in their probationary period, promoting full integration into Técnico's academic life and conveying the institution's ethical values and good practices. It combines mentoring and monitoring, access to start-up funds, training activities, and classroom support, coordinated by CADDI and run by Técnico's Núcleo de Formação e Desenvolvimento (NFD) and Academic Development Unit (NDA).",
+    link: "https://shapingthefuture.tecnico.ulisboa.pt/en/",
+    linkLabel: "Read more",
   },
   {
     name: "CSF-MIND",
