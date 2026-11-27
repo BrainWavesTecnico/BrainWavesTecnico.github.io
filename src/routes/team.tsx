@@ -41,7 +41,7 @@ const pi: Member[] = [
       </>
     ),
     photo: joanaPhoto,
-    bio: "Joana's research has provided insight into brain function, uncovering synchronization mechanisms underlying functional connectivity, oscillations as collective emergent properties, and the functional relevance of non stationary brain dynamics. Her work also explores the links between spontaneous brain activity, mental health and cognitive function. Mother of three, she is endlessly curious, intrigued and fascinated by the mechanisms of life, mind and consciousness, both in her research and in life.",
+    bio: "Joana leads research that has reshaped how we understand brain function, revealing the synchronization mechanisms behind functional connectivity, showing that oscillations emerge as collective properties of brain dynamics, and uncovering why non-stationary activity matters for cognition. Her work bridges spontaneous brain activity, mental health and cognitive function, turning fundamental discoveries about brain dynamics into clinical insight. Mother of three, she brings the same restless curiosity to her research and her life, endlessly fascinated by the mechanisms of life, mind and consciousness.",
   },
 ];
 
