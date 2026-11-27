@@ -7,8 +7,6 @@ import martaPhoto from "@/assets/MartaXavier.jpg";
 import afonsoPhoto from "@/assets/AfonsoFernandes.jpeg";
 import vaniaPhoto from "@/assets/foto_ohbm.jpeg";
 import haeunPhoto from "@/assets/hauen.jpeg";
-import giuliaPhoto from "@/assets/DSC038981-scaled.jpg";
-import andreaPhoto from "@/assets/AndreaVeronese.jpg";
 import joanaPhoto from "@/assets/Joana2025.jpeg";
 import inesPhoto from "@/assets/InesBh.jpeg";
 import beatrizPhoto from "@/assets/Beatriz_Santos_Phd.jpeg";
@@ -21,7 +19,7 @@ export const Route = createFileRoute("/team")({
   head: () => ({
     meta: [
       { title: "Team — BrainWaves Group" },
-      { name: "description", content: "Principal investigator, PhD students, Master students, research assistants and visiting researchers of the BrainWaves Group." },
+      { name: "description", content: "Principal investigator, postdoctoral researchers, PhD students and Master students of the BrainWaves Group." },
       { property: "og:title", content: "Team — BrainWaves Group" },
       { property: "og:description", content: "Meet the BrainWaves Group team." },
     ],
@@ -93,6 +91,13 @@ const phdStudents: Member[] = [
     photo: beatrizPhoto,
     bio: "With a background in Biomedical Engineering and Biophysics (BSc, MSc), Beatriz is a PhD student at IST and Champalimaud Foundation. Her research focus is on optimization of current brain stimulation targeting strategies in the treatment of neuropsychiatric disorders, combining neuroimaging, biophysical modelling and expertise as a TMS technician. Outside the lab she can be found reading, exploring or spending time with friends and family.",
   },
+  {
+    name: "Leonor Abreu",
+    role: "PhD Student",
+    photo: leonorPhoto,
+    photoPosition: "object-top",
+    bio: "Background in social impact and team development and training. A strong desire to understand humanity led from impact evaluation in the social economy to the Psychology and Neuroscience of Mental Health MSc (King's College London). Leonor is now a PhD student on WOMBRAIN – Women's Brain Dynamics and Menstrual-Cycle Mood Vulnerability: From Neurobiology to Clinical Protocol Development, in partnership with Hospital CUF Descobertas, exploring how large-scale brain dynamics, using fMRI and dynamical systems approaches, shift across mental health, emotions and women's health. Mother of three, enjoys running and dancing.",
+  },
 ];
 
 const masterStudents: Member[] = [
@@ -131,34 +136,11 @@ const masterStudents: Member[] = [
   },
 ];
 
-const researchAssistants: Member[] = [
-  {
-    name: "Leonor Abreu",
-    role: "Research Assistant",
-    photo: leonorPhoto,
-    photoPosition: "object-top",
-    bio: "Background in social impact and team development and training. A strong desire to understand humanity led from impact evaluation in the social economy to the Psychology and Neuroscience of Mental Health MSc (King's College London), now exploring how large-scale brain dynamics, using fMRI and dynamical systems approaches, shift across mental health, emotions and women's health. Mother of three, enjoys running and dancing.",
-  },
-];
-
-const visiting: Member[] = [
-  {
-    name: "Giulia Pagnin",
-    role: "Visiting PhD Student",
-    photo: giuliaPhoto,
-    bio: "PhD candidate in Neuroscience at the University of Padova, with a background in Biomedical Engineering (BSc) and Bioengineering for Neuroscience (MSc). Her research focuses on dynamic functional connectivity and brain state analysis using computational neuroimaging approaches to investigate alterations in large-scale brain networks in neurodegenerative disorders. Outside research, she enjoys listening to music, surfing and spending time with her cat.",
-  },
-  {
-    name: "Andrea Veronese",
-    role: "Visiting PhD Student",
-    photo: andreaPhoto,
-    bio: "Andrea Veronese is a theoretical neuroscience PhD student (Camerino/Padua), passionate about complex systems. In his research, he combines computational whole-brain modeling with EEG data to study the brain's response to perturbations. Currently in Lisbon, he is extending this approach to investigate brain waves in rs-fMRI data.",
-  },
-];
-
 const former: Member[] = [
   { name: "Borjan Milinkovic", role: "Visiting Postdoc", bio: "Paris Brain Institute." },
   { name: "Angeliki Plevri", role: "Research Assistant", bio: "Maastricht University." },
+  { name: "Giulia Pagnin", role: "Visiting PhD Student", bio: "University of Padova." },
+  { name: "Andrea Veronese", role: "Visiting PhD Student", bio: "Camerino/Padua." },
 ];
 
 function MemberCard({ m, showAvatar = true }: { m: Member; showAvatar?: boolean }) {
@@ -214,18 +196,6 @@ function TeamPage() {
           <h2 className="text-xl font-semibold mb-5">Master students</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {masterStudents.map((m) => <MemberCard key={m.name} m={m} />)}
-          </div>
-        </section>
-        <section>
-          <h2 className="text-xl font-semibold mb-5">Research assistant</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {researchAssistants.map((m) => <MemberCard key={m.name} m={m} />)}
-          </div>
-        </section>
-        <section>
-          <h2 className="text-xl font-semibold mb-5">Visiting researchers</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {visiting.map((m) => <MemberCard key={m.name} m={m} />)}
           </div>
         </section>
         <section>
