@@ -50,7 +50,7 @@ const projects = [
   {
     name: "Shaping the Future",
     funder: "Instituto Superior Técnico & Santander",
-    desc: "A programme for Assistant Professors and Researchers in their probationary period, promoting full integration into Técnico's academic life and conveying the institution's ethical values and good practices. It combines mentoring and monitoring, access to start-up funds, training activities, and classroom support, coordinated by CADDI and run by Técnico's Núcleo de Formação e Desenvolvimento (NFD) and Academic Development Unit (NDA).",
+    desc: "A programme for Assistant Professors and Researchers in their probationary period, promoting full integration into Técnico's academic life and conveying the institution's ethical values and good practices. It combines mentoring and monitoring, access to start-up funds including funding for equipment and for a sabbatical period abroad, training activities, and classroom support.",
     link: "https://shapingthefuture.tecnico.ulisboa.pt/en/",
     linkLabel: "Read more",
   },
