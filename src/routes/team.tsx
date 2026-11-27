@@ -14,6 +14,7 @@ import inesPhoto from "@/assets/InesBh.jpeg";
 import beatrizPhoto from "@/assets/Beatriz_Santos_Phd.jpeg";
 import martaBaptistaPhoto from "@/assets/foto_MartaBaptista.jpg";
 import sterrePhoto from "@/assets/SterreMeijer.jpeg";
+import nicolaPhoto from "@/assets/PortraitNicolaCinardi.jpeg";
 import groupBanner from "@/assets/BrainWavesLabOct26_banner.jpg";
 
 export const Route = createFileRoute("/team")({
@@ -43,6 +44,15 @@ const pi: Member[] = [
     ),
     photo: joanaPhoto,
     bio: "Joana's research has provided insight into brain function, uncovering synchronization mechanisms underlying functional connectivity, oscillations as collective emergent properties, and the functional relevance of non stationary brain dynamics. Her work also explores the links between spontaneous brain activity, mental health and cognitive function. Mother of three, she is endlessly curious, intrigued and fascinated by the mechanisms of life, mind and consciousness, both in her research and in life.",
+  },
+];
+
+const postdocs: Member[] = [
+  {
+    name: "Nicola Cinardi",
+    role: "Postdoctoral Researcher",
+    photo: nicolaPhoto,
+    bio: "Nicola is a theoretical physicist with a PhD in Complex Systems. His research combines dynamical systems theory, complex networks, higher-order interactions, information theory and statistical physics to understand how collective phenomena emerge from the interactions between individual components — from neuroscience to biological systems and collective social behaviour. In neuroscience, he explores the interplay between brain structure, function and dynamics, with particular interest in collective neural activity, brain eigenmodes and the physical mechanisms underlying brain organisation. His broader interests include mathematical and computational frameworks for complex adaptive systems, with potential implications for artificial intelligence and artificial neural networks.",
   },
 ];
 
@@ -187,6 +197,12 @@ function TeamPage() {
         <section>
           <h2 className="text-xl font-semibold mb-5">Principal Investigator</h2>
           {pi.map((m) => <MemberCard key={m.name} m={m} />)}
+        </section>
+        <section>
+          <h2 className="text-xl font-semibold mb-5">Postdoctoral researchers</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {postdocs.map((m) => <MemberCard key={m.name} m={m} />)}
+          </div>
         </section>
         <section>
           <h2 className="text-xl font-semibold mb-5">PhD students</h2>
