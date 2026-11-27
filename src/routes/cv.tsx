@@ -35,7 +35,7 @@ const positions = [
 
 const visitingPositions = [
   { role: "Visiting Researcher", place: "Champalimaud Foundation, Lisbon, Portugal", years: "2018–present" },
-  { role: "Visiting Researcher", place: "University of Oxford, UK", years: "2017–present" },
+  { role: "Visiting Researcher", place: "Department of Psychiatry, University of Oxford, UK", years: "2017–2024" },
 ];
 
 const projects = [
