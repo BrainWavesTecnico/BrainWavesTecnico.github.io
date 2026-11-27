@@ -55,6 +55,11 @@ const projects = [
     linkLabel: "Read more",
   },
   {
+    name: "3DS-Relax",
+    funder: "IDI&CA, Universidade Politécnica de Lisboa · 2026–2027",
+    desc: "Psychophysiological Monitoring of Emotional States via 3D Audio and Vibration with AI-based Assessment. The project uses the SonikB3D multisensory platform, combining immersive 3D audio and vibration to promote and evaluate relaxation. Through EEG, ECG and EDA monitoring, alongside AI, it identifies the user's emotional state in real time, contributing to stress regulation, mental health and well-being. A collaboration between Instituto Superior de Engenharia de Lisboa (ISEL), Universidade Lusófona (HEI-Lab) and IST-LaSEEB/ISR.",
+  },
+  {
     name: "CSF-MIND",
     funder: "2CA-Braga · 2026–2028",
     desc: "CSF-MIND: Cerebrospinal Fluid Monitoring of Dynamic Mental States. Principal Investigator, studying cerebrospinal fluid dynamics and how they relate to the organisation of brain networks.",
