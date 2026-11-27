@@ -4,6 +4,7 @@ import { Download, FolderKanban } from "lucide-react";
 import cvPdf from "@/assets/CV_Joana_Cabral.pdf?url";
 import logoCCA from "@/assets/logoCCA.svg";
 import arqusLogo from "@/assets/arqus-color.png";
+import fctTenureLogo from "@/assets/FctTenureLogo.png";
 
 export const Route = createFileRoute("/cv")({
   head: () => ({
@@ -38,6 +39,14 @@ const visitingPositions = [
 ];
 
 const projects = [
+  {
+    name: "FCT-Tenure",
+    funder: "Fundação para a Ciência e a Tecnologia (FCT) · 2025–present",
+    desc: "A new FCT funding instrument to stabilise doctoral researchers in permanent career positions, designed to promote the hiring of PhD-holding researchers exclusively for permanent posts. Includes start-up funds.",
+    link: "https://www.fct.pt/1-a-edicao-do-fct-tenure-com-1000-vagas-exclusivamente-para-posicoes-permanentes/",
+    linkLabel: "Read more",
+    logo: fctTenureLogo,
+  },
   {
     name: "CSF-MIND",
     funder: "2CA-Braga · 2026–2028",
